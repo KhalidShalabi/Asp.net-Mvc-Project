@@ -1,0 +1,117 @@
+﻿@model IEnumerable<SMS.Models.Teacher>
+
+@{
+    /**/
+
+    ViewBag.Title = "Index";
+}
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<h2 id="heads">Teachers List</h2>
+
+
+
+
+
+
+<br />
+<br />
+<button class="btn btn-info pull-left " style="margin-left:20px;">@Html.ActionLink("Add New", "Create")</button>
+<div class="container">
+
+    <div class="form-group">
+
+        <div class="input-group">
+
+            <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+            <input type="text" id="Search" placeholder="Search" class="form-control" />
+        </div>
+    </div>
+</div>
+
+<table class="table table-bordered" id="Teachertabel">
+    <tr>
+        <th>
+            Name
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ThAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ThHireDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ThDegree)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ThExperience)
+        </th>
+
+
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Gender)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BirthDate)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.Password)
+        </th>
+        <th>Actions</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr class="Search">
+            <td>
+                @item.ThFirstName @item.ThSecondName @item.ThLastName
+
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ThAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ThHireDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ThDegree)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ThExperience)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            @if (item.Gender == true)
+            {
+                <td>Female</td>
+
+            }
+            else
+            {
+                <td>Male</td>
+            }
+            <td>
+                @Html.DisplayFor(modelItem => item.BirthDate)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Password)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.TeacherId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.TeacherId })
+            </td>
+        </tr>
+    }
+
+</table>
+
+<script src="~/Content/admin/js/default.js"></script>
+<script>
+    
+</script>

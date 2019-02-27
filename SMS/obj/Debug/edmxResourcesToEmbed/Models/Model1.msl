@@ -1,0 +1,325 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="masterModelStoreContainer" CdmEntityContainer="masterEntities">
+    <EntitySetMapping Name="C__MigrationHistory">
+      <EntityTypeMapping TypeName="masterModel.C__MigrationHistory">
+        <MappingFragment StoreEntitySet="__MigrationHistory">
+          <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
+          <ScalarProperty Name="ContextKey" ColumnName="ContextKey" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AssigmentGrades">
+      <EntityTypeMapping TypeName="masterModel.AssigmentGrade">
+        <MappingFragment StoreEntitySet="AssigmentGrades">
+          <ScalarProperty Name="AssigmentGradeId" ColumnName="AssigmentGradeId" />
+          <ScalarProperty Name="StudentName" ColumnName="StudentName" />
+          <ScalarProperty Name="AssigmentName" ColumnName="AssigmentName" />
+          <ScalarProperty Name="Grade" ColumnName="Grade" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Assigments">
+      <EntityTypeMapping TypeName="masterModel.Assigment">
+        <MappingFragment StoreEntitySet="Assigments">
+          <ScalarProperty Name="AssigmentId" ColumnName="AssigmentId" />
+          <ScalarProperty Name="AssigName" ColumnName="AssigName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="LastDate" ColumnName="LastDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Classes">
+      <EntityTypeMapping TypeName="masterModel.Class">
+        <MappingFragment StoreEntitySet="Classes">
+          <ScalarProperty Name="ClassId" ColumnName="ClassId" />
+          <ScalarProperty Name="ClassName" ColumnName="ClassName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ClassMaterials">
+      <EntityTypeMapping TypeName="masterModel.ClassMaterial">
+        <MappingFragment StoreEntitySet="ClassMaterials">
+          <ScalarProperty Name="ClassMaterialsId" ColumnName="ClassMaterialsId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Courses">
+      <EntityTypeMapping TypeName="masterModel.Cours">
+        <MappingFragment StoreEntitySet="Courses">
+          <ScalarProperty Name="CoursesId" ColumnName="CoursesId" />
+          <ScalarProperty Name="CoursesTitle" ColumnName="CoursesTitle" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ClassId" ColumnName="ClassId" />
+          <ScalarProperty Name="ClassMaterialsId" ColumnName="ClassMaterialsId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DayDates">
+      <EntityTypeMapping TypeName="masterModel.DayDate">
+        <MappingFragment StoreEntitySet="DayDates">
+          <ScalarProperty Name="DayId" ColumnName="DayId" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="TeacherId" ColumnName="TeacherId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Days">
+      <EntityTypeMapping TypeName="masterModel.Day">
+        <MappingFragment StoreEntitySet="Days">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Day1" ColumnName="Day" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Hostels">
+      <EntityTypeMapping TypeName="masterModel.Hostel">
+        <MappingFragment StoreEntitySet="Hostels">
+          <ScalarProperty Name="HostleId" ColumnName="HostleId" />
+          <ScalarProperty Name="HostelType" ColumnName="HostelType" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Libraries">
+      <EntityTypeMapping TypeName="masterModel.Library">
+        <MappingFragment StoreEntitySet="Libraries">
+          <ScalarProperty Name="LibraryId" ColumnName="LibraryId" />
+          <ScalarProperty Name="BookTitle" ColumnName="BookTitle" />
+          <ScalarProperty Name="BookAuthor" ColumnName="BookAuthor" />
+          <ScalarProperty Name="BookPrice" ColumnName="BookPrice" />
+          <ScalarProperty Name="BookDescription" ColumnName="BookDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Managers">
+      <EntityTypeMapping TypeName="masterModel.Manager">
+        <MappingFragment StoreEntitySet="Managers">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Parents">
+      <EntityTypeMapping TypeName="masterModel.Parent">
+        <MappingFragment StoreEntitySet="Parents">
+          <ScalarProperty Name="ParentsId" ColumnName="ParentsId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sections">
+      <EntityTypeMapping TypeName="masterModel.Section">
+        <MappingFragment StoreEntitySet="Sections">
+          <ScalarProperty Name="SectionId" ColumnName="SectionId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ClassId" ColumnName="ClassId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StudentAttindences">
+      <EntityTypeMapping TypeName="masterModel.StudentAttindence">
+        <MappingFragment StoreEntitySet="StudentAttindence">
+          <ScalarProperty Name="AttId" ColumnName="AttId" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="StudentId" ColumnName="StudentId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Students">
+      <EntityTypeMapping TypeName="masterModel.Student">
+        <MappingFragment StoreEntitySet="Students">
+          <ScalarProperty Name="StudentId" ColumnName="StudentId" />
+          <ScalarProperty Name="StFirstName" ColumnName="StFirstName" />
+          <ScalarProperty Name="StAddress" ColumnName="StAddress" />
+          <ScalarProperty Name="StDOB" ColumnName="StDOB" />
+          <ScalarProperty Name="StAge" ColumnName="StAge" />
+          <ScalarProperty Name="StSecondName" ColumnName="StSecondName" />
+          <ScalarProperty Name="StLastName" ColumnName="StLastName" />
+          <ScalarProperty Name="StPassword" ColumnName="StPassword" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="SectionId" ColumnName="SectionId" />
+          <ScalarProperty Name="National_Number" ColumnName="National_Number" />
+          <ScalarProperty Name="ImagePath" ColumnName="ImagePath" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StudentsGrades">
+      <EntityTypeMapping TypeName="masterModel.StudentsGrade">
+        <MappingFragment StoreEntitySet="StudentsGrade">
+          <ScalarProperty Name="TeacherId" ColumnName="TeacherId" />
+          <ScalarProperty Name="StudentId" ColumnName="StudentId" />
+          <ScalarProperty Name="CourseId" ColumnName="CourseId" />
+          <ScalarProperty Name="ClassId" ColumnName="ClassId" />
+          <ScalarProperty Name="SectionId" ColumnName="SectionId" />
+          <ScalarProperty Name="FirstGrade" ColumnName="FirstGrade" />
+          <ScalarProperty Name="SecondGrade" ColumnName="SecondGrade" />
+          <ScalarProperty Name="ThirdGrade" ColumnName="ThirdGrade" />
+          <ScalarProperty Name="FinalGrade" ColumnName="FinalGrade" />
+          <ScalarProperty Name="Avg" ColumnName="Avg" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StudySchedules">
+      <EntityTypeMapping TypeName="masterModel.StudySchedule">
+        <MappingFragment StoreEntitySet="StudySchedule">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CourseId" ColumnName="CourseId" />
+          <ScalarProperty Name="DayId" ColumnName="DayId" />
+          <ScalarProperty Name="TeacherId" ColumnName="TeacherId" />
+          <ScalarProperty Name="SectionId" ColumnName="SectionId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TeacherCourses">
+      <EntityTypeMapping TypeName="masterModel.TeacherCours">
+        <MappingFragment StoreEntitySet="TeacherCourses">
+          <ScalarProperty Name="CourseId" ColumnName="CourseId" />
+          <ScalarProperty Name="TeacherId" ColumnName="TeacherId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Teachers">
+      <EntityTypeMapping TypeName="masterModel.Teacher">
+        <MappingFragment StoreEntitySet="Teachers">
+          <ScalarProperty Name="TeacherId" ColumnName="TeacherId" />
+          <ScalarProperty Name="ThFirstName" ColumnName="ThFirstName" />
+          <ScalarProperty Name="ThAddress" ColumnName="ThAddress" />
+          <ScalarProperty Name="ThHireDate" ColumnName="ThHireDate" />
+          <ScalarProperty Name="ThDegree" ColumnName="ThDegree" />
+          <ScalarProperty Name="ThExperience" ColumnName="ThExperience" />
+          <ScalarProperty Name="ThSecondName" ColumnName="ThSecondName" />
+          <ScalarProperty Name="ThLastName" ColumnName="ThLastName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TeacherSections">
+      <EntityTypeMapping TypeName="masterModel.TeacherSection">
+        <MappingFragment StoreEntitySet="TeacherSections">
+          <ScalarProperty Name="TeacherId" ColumnName="TeacherId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="SectinId" ColumnName="SectinId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MSreplication_options">
+      <EntityTypeMapping TypeName="masterModel.MSreplication_options">
+        <MappingFragment StoreEntitySet="MSreplication_options">
+          <ScalarProperty Name="optname" ColumnName="optname" />
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="major_version" ColumnName="major_version" />
+          <ScalarProperty Name="minor_version" ColumnName="minor_version" />
+          <ScalarProperty Name="revision" ColumnName="revision" />
+          <ScalarProperty Name="install_failures" ColumnName="install_failures" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="spt_fallback_db">
+      <EntityTypeMapping TypeName="masterModel.spt_fallback_db">
+        <MappingFragment StoreEntitySet="spt_fallback_db">
+          <ScalarProperty Name="xserver_name" ColumnName="xserver_name" />
+          <ScalarProperty Name="xdttm_ins" ColumnName="xdttm_ins" />
+          <ScalarProperty Name="xdttm_last_ins_upd" ColumnName="xdttm_last_ins_upd" />
+          <ScalarProperty Name="xfallback_dbid" ColumnName="xfallback_dbid" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="dbid" ColumnName="dbid" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="version" ColumnName="version" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="spt_fallback_dev">
+      <EntityTypeMapping TypeName="masterModel.spt_fallback_dev">
+        <MappingFragment StoreEntitySet="spt_fallback_dev">
+          <ScalarProperty Name="xserver_name" ColumnName="xserver_name" />
+          <ScalarProperty Name="xdttm_ins" ColumnName="xdttm_ins" />
+          <ScalarProperty Name="xdttm_last_ins_upd" ColumnName="xdttm_last_ins_upd" />
+          <ScalarProperty Name="xfallback_low" ColumnName="xfallback_low" />
+          <ScalarProperty Name="xfallback_drive" ColumnName="xfallback_drive" />
+          <ScalarProperty Name="low" ColumnName="low" />
+          <ScalarProperty Name="high" ColumnName="high" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="phyname" ColumnName="phyname" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="spt_fallback_usg">
+      <EntityTypeMapping TypeName="masterModel.spt_fallback_usg">
+        <MappingFragment StoreEntitySet="spt_fallback_usg">
+          <ScalarProperty Name="xserver_name" ColumnName="xserver_name" />
+          <ScalarProperty Name="xdttm_ins" ColumnName="xdttm_ins" />
+          <ScalarProperty Name="xdttm_last_ins_upd" ColumnName="xdttm_last_ins_upd" />
+          <ScalarProperty Name="xfallback_vstart" ColumnName="xfallback_vstart" />
+          <ScalarProperty Name="dbid" ColumnName="dbid" />
+          <ScalarProperty Name="segmap" ColumnName="segmap" />
+          <ScalarProperty Name="lstart" ColumnName="lstart" />
+          <ScalarProperty Name="sizepg" ColumnName="sizepg" />
+          <ScalarProperty Name="vstart" ColumnName="vstart" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="spt_monitor">
+      <EntityTypeMapping TypeName="masterModel.spt_monitor">
+        <MappingFragment StoreEntitySet="spt_monitor">
+          <ScalarProperty Name="lastrun" ColumnName="lastrun" />
+          <ScalarProperty Name="cpu_busy" ColumnName="cpu_busy" />
+          <ScalarProperty Name="io_busy" ColumnName="io_busy" />
+          <ScalarProperty Name="idle" ColumnName="idle" />
+          <ScalarProperty Name="pack_received" ColumnName="pack_received" />
+          <ScalarProperty Name="pack_sent" ColumnName="pack_sent" />
+          <ScalarProperty Name="connections" ColumnName="connections" />
+          <ScalarProperty Name="pack_errors" ColumnName="pack_errors" />
+          <ScalarProperty Name="total_read" ColumnName="total_read" />
+          <ScalarProperty Name="total_write" ColumnName="total_write" />
+          <ScalarProperty Name="total_errors" ColumnName="total_errors" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_getTeacher" FunctionName="masterModel.Store.sp_getTeacher">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="masterModel.sp_getTeacher_Result">
+          <ScalarProperty Name="ThFirstName" ColumnName="ThFirstName" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ClassName" ColumnName="ClassName" />
+          <ScalarProperty Name="ThSecondName" ColumnName="ThSecondName" />
+          <ScalarProperty Name="CoursesTitle" ColumnName="CoursesTitle" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_MScleanupmergepublisher" FunctionName="masterModel.Store.sp_MScleanupmergepublisher" />
+    <FunctionImportMapping FunctionImportName="sp_MSrepl_startup" FunctionName="masterModel.Store.sp_MSrepl_startup" />
+    <EntitySetMapping Name="Events">
+      <EntityTypeMapping TypeName="masterModel.Event">
+        <MappingFragment StoreEntitySet="Events">
+          <ScalarProperty Name="IsFullDay" ColumnName="IsFullDay" />
+          <ScalarProperty Name="ThemeColor" ColumnName="ThemeColor" />
+          <ScalarProperty Name="End" ColumnName="End" />
+          <ScalarProperty Name="Start" ColumnName="Start" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="EventID" ColumnName="EventID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

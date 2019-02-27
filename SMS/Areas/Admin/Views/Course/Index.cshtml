@@ -1,0 +1,185 @@
+﻿@model IEnumerable<SMS.Models.Cours>
+@{
+    ViewBag.Title = "Index";
+}
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<h2 id="heads">Courses</h2>
+
+<!-- The Modal -->
+<form role="form" data-toggle="validator">
+
+    <div class="modal" id="CourseModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title"></h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <!-- Modal body -->
+                <div class="modal-body">
+
+                    <label>Course Title</label>
+                    <input type="text" required id="CourseTitle" name="CourseTitle" value="" class="form-control" />
+
+
+                    <label>Description</label>
+                    <input type="text" id="Description" name="Description" value="" class="form-control" />
+
+                    <label>Class Materials</label>
+                    @Html.DropDownList("ClassMId", null, "Select ClassMaterials", new { @class = "form-control" })
+                    <input type="hidden" id="ClassId" name="ClassId" value="@Request.Params["class_id"]" />
+                    <input type="hidden" id="CourseId" name="CourseId" value="0" />
+
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    <button id="formSubmit" type="button" class="btn btn-primary">Save</button>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    </form>
+
+
+    <button id="btn-add" style="margin-right:10px;" class="btn btn-info pull-left">Add new</button>
+    <div class="container">
+        <div class="form-group">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+                <input type="text" id="Search" placeholder="Search" class="form-control" />
+            </div>
+        </div>
+    </div>
+
+    <table class="table  table-hover" id="CourseTable"></table>
+
+
+
+
+    <script>
+        //Target insted of adding jquery script we create function in layout then call it
+        function TargetJs() {
+
+            $('#btn-add').click(function () {
+                $('#CourseModal .modal-title').text('Add new Course');
+                $('#CourseModal').modal();
+                $("#CourseTitle").val('')
+                $("#Description").val('')
+                $("#ClassMId").val(0)
+            })
+            GetCourse();
+            //Get The Data After Adding
+            function GetCourse() {
+                var class_id = $("#ClassId").val();
+                $.ajax({
+                    url: "http://localhost:60487/Admin/Course/Table?class_id=" + class_id,
+                    success: function (data) {
+                        $('#CourseTable').html(data);
+                    }
+                });
+
+            }
+
+            //Submit The Form using ajax
+            $('body').on('click', '#formSubmit', function () {
+
+                //Read the txt
+                var Title = $('#CourseTitle').val();
+                var desc = $('#Description').val();
+                var class_id = $("#ClassId").val();
+                var CourseId = $("#CourseId").val();
+                var ClassMId = $("#ClassMId").val();
+
+                //if no data add else edit
+                if (CourseId == 0) {
+
+                    $.ajax({
+                        type: 'POST',
+                        url: 'http://localhost:60487/Admin/Course/FormSubmit',
+                        //First Name is the parameters From the controller must be the same name
+                        data: { Title: Title, Desc: desc, class_id: class_id, ClassMId: ClassMId },
+                        //Success is after post what we want to Show ?
+                        success: function () {
+                            GetCourse();
+                            $('#CourseModal').modal('hide');
+
+                            $("#CoursesTitle").val('')
+                            $("#Description").val('')
+                            $("#CourseId").val(0)
+                            $("#ClassMId").val(0)
+                        }
+                    });
+
+
+
+                }
+                else {
+                    $.ajax({
+                        type: 'POST',
+                        url: 'http://localhost:60487/Admin/course/Edit',
+                        data: { Title: Title, desc: desc, Course_id: CourseId, class_id: class_id, ClassMId: ClassMId },
+                        success: function () {
+                            GetCourse();
+                            $('#CourseModal').modal('hide');
+                            $("#CoursesTitle").val('')
+                            $("#Description").val('')
+                            $("#CourseId").val(0)
+                            $("#ClassMId").val(0)
+
+
+                        }
+                    });
+
+                }
+
+
+            });
+
+
+
+            $('body').on("click", ".btn-delete", function () {
+                var id = $(this).data('id');
+                var result = confirm('Are you sure you want to delete this Course ?');
+                if (result) {
+                    $.ajax({
+
+                        url: "http://localhost:60487/Admin/course/Delete?id=" + id,
+
+                        success: function () {
+                            GetCourse();
+                        }
+                    })
+                }
+            })
+
+            $('body').on("click", '#btn-edit', function () {
+
+                $('#CourseModal .modal-title').text('Edit new Course');
+                $('#CourseModal').modal();
+                var CourseId = $(this).data('id');
+                $.ajax({
+
+                    url: 'http://localhost:60487/Admin/Course/GetCourse?Course_id=' + CourseId,
+
+                    success: function (data) {
+
+                        //After Edit Fill the data
+                        $("#CourseTitle").val(data.CoursesTitle)
+                        $("#CourseId").val(data.CoursesId)
+                        $('#Description').val(data.Description)
+                        $("#ClassMId").val(data.ClassMaterialsId)
+
+
+                    }
+                });
+            })
+
+
+        }
+    </script>

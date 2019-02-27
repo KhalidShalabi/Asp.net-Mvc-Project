@@ -1,0 +1,480 @@
+C:\Users\Khali\source\repos\SMS\SMS\bin\ApplicationInsights.config
+C:\Users\Khali\source\repos\SMS\SMS\bin\SMS.dll.config
+C:\Users\Khali\source\repos\SMS\SMS\bin\SMS.dll
+C:\Users\Khali\source\repos\SMS\SMS\bin\SMS.pdb
+C:\Users\Khali\source\repos\SMS\SMS\bin\roslyn\csc.exe
+C:\Users\Khali\source\repos\SMS\SMS\bin\roslyn\csc.exe.config
+C:\Users\Khali\source\repos\SMS\SMS\bin\roslyn\csc.rsp
+C:\Users\Khali\source\repos\SMS\SMS\bin\roslyn\csi.exe
+C:\Users\Khali\source\repos\SMS\SMS\bin\roslyn\csi.exe.config
+C:\Users\Khali\source\repos\SMS\SMS\bin\roslyn\csi.rsp
+C:\Users\Khali\source\repos\SMS\SMS\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Khali\source\repos\SMS\SMS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Khali\source\repos\SMS\SMS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Khali\source\repos\SMS\SMS\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Khali\source\repos\SMS\SMS\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Khali\source\repos\SMS\SMS\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Khali\source\repos\SMS\SMS\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Khali\source\repos\SMS\SMS\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Khali\source\repos\SMS\SMS\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Khali\source\repos\SMS\SMS\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Khali\source\repos\SMS\SMS\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Khali\source\repos\SMS\SMS\bin\roslyn\System.AppContext.dll
+C:\Users\Khali\source\repos\SMS\SMS\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Khali\source\repos\SMS\SMS\bin\roslyn\System.Console.dll
+C:\Users\Khali\source\repos\SMS\SMS\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Khali\source\repos\SMS\SMS\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Khali\source\repos\SMS\SMS\bin\roslyn\System.IO.Compression.dll
+C:\Users\Khali\source\repos\SMS\SMS\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Khali\source\repos\SMS\SMS\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Khali\source\repos\SMS\SMS\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\Khali\source\repos\SMS\SMS\bin\roslyn\System.IO.Pipes.dll
+C:\Users\Khali\source\repos\SMS\SMS\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Khali\source\repos\SMS\SMS\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\Khali\source\repos\SMS\SMS\bin\roslyn\System.Security.Claims.dll
+C:\Users\Khali\source\repos\SMS\SMS\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Khali\source\repos\SMS\SMS\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Khali\source\repos\SMS\SMS\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Khali\source\repos\SMS\SMS\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Khali\source\repos\SMS\SMS\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\Khali\source\repos\SMS\SMS\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Khali\source\repos\SMS\SMS\bin\roslyn\System.ValueTuple.dll
+C:\Users\Khali\source\repos\SMS\SMS\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Khali\source\repos\SMS\SMS\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Khali\source\repos\SMS\SMS\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Khali\source\repos\SMS\SMS\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Khali\source\repos\SMS\SMS\bin\roslyn\vbc.exe
+C:\Users\Khali\source\repos\SMS\SMS\bin\roslyn\vbc.exe.config
+C:\Users\Khali\source\repos\SMS\SMS\bin\roslyn\vbc.rsp
+C:\Users\Khali\source\repos\SMS\SMS\bin\roslyn\VBCSCompiler.exe
+C:\Users\Khali\source\repos\SMS\SMS\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Khali\source\repos\SMS\SMS\bin\Antlr3.Runtime.dll
+C:\Users\Khali\source\repos\SMS\SMS\bin\EntityFramework.dll
+C:\Users\Khali\source\repos\SMS\SMS\bin\EntityFramework.SqlServer.dll
+C:\Users\Khali\source\repos\SMS\SMS\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Khali\source\repos\SMS\SMS\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Khali\source\repos\SMS\SMS\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Khali\source\repos\SMS\SMS\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Khali\source\repos\SMS\SMS\bin\Microsoft.AI.Web.dll
+C:\Users\Khali\source\repos\SMS\SMS\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Khali\source\repos\SMS\SMS\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Khali\source\repos\SMS\SMS\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Khali\source\repos\SMS\SMS\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Khali\source\repos\SMS\SMS\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Khali\source\repos\SMS\SMS\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+C:\Users\Khali\source\repos\SMS\SMS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Khali\source\repos\SMS\SMS\bin\Microsoft.Owin.dll
+C:\Users\Khali\source\repos\SMS\SMS\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Khali\source\repos\SMS\SMS\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Khali\source\repos\SMS\SMS\bin\Microsoft.Owin.Security.dll
+C:\Users\Khali\source\repos\SMS\SMS\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Khali\source\repos\SMS\SMS\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Khali\source\repos\SMS\SMS\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Khali\source\repos\SMS\SMS\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Khali\source\repos\SMS\SMS\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Khali\source\repos\SMS\SMS\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Khali\source\repos\SMS\SMS\bin\Newtonsoft.Json.dll
+C:\Users\Khali\source\repos\SMS\SMS\bin\Owin.dll
+C:\Users\Khali\source\repos\SMS\SMS\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Khali\source\repos\SMS\SMS\bin\System.Web.Helpers.dll
+C:\Users\Khali\source\repos\SMS\SMS\bin\System.Web.Mvc.dll
+C:\Users\Khali\source\repos\SMS\SMS\bin\System.Web.Optimization.dll
+C:\Users\Khali\source\repos\SMS\SMS\bin\System.Web.Razor.dll
+C:\Users\Khali\source\repos\SMS\SMS\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Khali\source\repos\SMS\SMS\bin\System.Web.WebPages.dll
+C:\Users\Khali\source\repos\SMS\SMS\bin\System.Web.WebPages.Razor.dll
+C:\Users\Khali\source\repos\SMS\SMS\bin\WebGrease.dll
+C:\Users\Khali\source\repos\SMS\SMS\bin\System.Web.Helpers.xml
+C:\Users\Khali\source\repos\SMS\SMS\bin\System.Web.Mvc.xml
+C:\Users\Khali\source\repos\SMS\SMS\bin\System.Web.Optimization.xml
+C:\Users\Khali\source\repos\SMS\SMS\bin\System.Web.Razor.xml
+C:\Users\Khali\source\repos\SMS\SMS\bin\System.Web.WebPages.xml
+C:\Users\Khali\source\repos\SMS\SMS\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Khali\source\repos\SMS\SMS\bin\System.Web.WebPages.Razor.xml
+C:\Users\Khali\source\repos\SMS\SMS\bin\Newtonsoft.Json.xml
+C:\Users\Khali\source\repos\SMS\SMS\bin\Antlr3.Runtime.pdb
+C:\Users\Khali\source\repos\SMS\SMS\bin\EntityFramework.xml
+C:\Users\Khali\source\repos\SMS\SMS\bin\EntityFramework.SqlServer.xml
+C:\Users\Khali\source\repos\SMS\SMS\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Khali\source\repos\SMS\SMS\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Khali\source\repos\SMS\SMS\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Khali\source\repos\SMS\SMS\bin\Microsoft.Owin.xml
+C:\Users\Khali\source\repos\SMS\SMS\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Khali\source\repos\SMS\SMS\bin\Microsoft.Owin.Security.xml
+C:\Users\Khali\source\repos\SMS\SMS\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Khali\source\repos\SMS\SMS\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Khali\source\repos\SMS\SMS\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Khali\source\repos\SMS\SMS\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Khali\source\repos\SMS\SMS\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Khali\source\repos\SMS\SMS\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Khali\source\repos\SMS\SMS\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Users\Khali\source\repos\SMS\SMS\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+C:\Users\Khali\source\repos\SMS\SMS\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Khali\source\repos\SMS\SMS\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Khali\source\repos\SMS\SMS\bin\Microsoft.AI.Web.xml
+C:\Users\Khali\source\repos\SMS\SMS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Khali\source\repos\SMS\SMS\obj\Debug\SMS.csprojAssemblyReference.cache
+C:\Users\Khali\source\repos\SMS\SMS\obj\Debug\SMS.csproj.CoreCompileInputs.cache
+C:\Users\Khali\source\repos\SMS\SMS\obj\Debug\SMS.csproj.CopyComplete
+C:\Users\Khali\source\repos\SMS\SMS\obj\Debug\SMS.dll
+C:\Users\Khali\source\repos\SMS\SMS\obj\Debug\SMS.pdb
+C:\Users\Osama\Desktop\SMS\SMS\bin\ApplicationInsights.config
+C:\Users\Osama\Desktop\SMS\SMS\bin\SMS.dll.config
+C:\Users\Osama\Desktop\SMS\SMS\bin\SMS.dll
+C:\Users\Osama\Desktop\SMS\SMS\bin\SMS.pdb
+C:\Users\Osama\Desktop\SMS\SMS\bin\roslyn\csc.exe
+C:\Users\Osama\Desktop\SMS\SMS\bin\roslyn\csc.exe.config
+C:\Users\Osama\Desktop\SMS\SMS\bin\roslyn\csc.rsp
+C:\Users\Osama\Desktop\SMS\SMS\bin\roslyn\csi.exe
+C:\Users\Osama\Desktop\SMS\SMS\bin\roslyn\csi.exe.config
+C:\Users\Osama\Desktop\SMS\SMS\bin\roslyn\csi.rsp
+C:\Users\Osama\Desktop\SMS\SMS\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Osama\Desktop\SMS\SMS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Osama\Desktop\SMS\SMS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Osama\Desktop\SMS\SMS\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Osama\Desktop\SMS\SMS\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Osama\Desktop\SMS\SMS\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Osama\Desktop\SMS\SMS\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Osama\Desktop\SMS\SMS\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Osama\Desktop\SMS\SMS\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Osama\Desktop\SMS\SMS\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Osama\Desktop\SMS\SMS\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Osama\Desktop\SMS\SMS\bin\roslyn\System.AppContext.dll
+C:\Users\Osama\Desktop\SMS\SMS\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Osama\Desktop\SMS\SMS\bin\roslyn\System.Console.dll
+C:\Users\Osama\Desktop\SMS\SMS\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Osama\Desktop\SMS\SMS\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Osama\Desktop\SMS\SMS\bin\roslyn\System.IO.Compression.dll
+C:\Users\Osama\Desktop\SMS\SMS\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Osama\Desktop\SMS\SMS\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Osama\Desktop\SMS\SMS\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\Osama\Desktop\SMS\SMS\bin\roslyn\System.IO.Pipes.dll
+C:\Users\Osama\Desktop\SMS\SMS\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Osama\Desktop\SMS\SMS\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\Osama\Desktop\SMS\SMS\bin\roslyn\System.Security.Claims.dll
+C:\Users\Osama\Desktop\SMS\SMS\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Osama\Desktop\SMS\SMS\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Osama\Desktop\SMS\SMS\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Osama\Desktop\SMS\SMS\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Osama\Desktop\SMS\SMS\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\Osama\Desktop\SMS\SMS\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Osama\Desktop\SMS\SMS\bin\roslyn\System.ValueTuple.dll
+C:\Users\Osama\Desktop\SMS\SMS\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Osama\Desktop\SMS\SMS\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Osama\Desktop\SMS\SMS\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Osama\Desktop\SMS\SMS\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Osama\Desktop\SMS\SMS\bin\roslyn\vbc.exe
+C:\Users\Osama\Desktop\SMS\SMS\bin\roslyn\vbc.exe.config
+C:\Users\Osama\Desktop\SMS\SMS\bin\roslyn\vbc.rsp
+C:\Users\Osama\Desktop\SMS\SMS\bin\roslyn\VBCSCompiler.exe
+C:\Users\Osama\Desktop\SMS\SMS\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Osama\Desktop\SMS\SMS\bin\Antlr3.Runtime.dll
+C:\Users\Osama\Desktop\SMS\SMS\bin\EntityFramework.dll
+C:\Users\Osama\Desktop\SMS\SMS\bin\EntityFramework.SqlServer.dll
+C:\Users\Osama\Desktop\SMS\SMS\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Osama\Desktop\SMS\SMS\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Osama\Desktop\SMS\SMS\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Osama\Desktop\SMS\SMS\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Osama\Desktop\SMS\SMS\bin\Microsoft.AI.Web.dll
+C:\Users\Osama\Desktop\SMS\SMS\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Osama\Desktop\SMS\SMS\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Osama\Desktop\SMS\SMS\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Osama\Desktop\SMS\SMS\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Osama\Desktop\SMS\SMS\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Osama\Desktop\SMS\SMS\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+C:\Users\Osama\Desktop\SMS\SMS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Osama\Desktop\SMS\SMS\bin\Microsoft.Owin.dll
+C:\Users\Osama\Desktop\SMS\SMS\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Osama\Desktop\SMS\SMS\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Osama\Desktop\SMS\SMS\bin\Microsoft.Owin.Security.dll
+C:\Users\Osama\Desktop\SMS\SMS\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Osama\Desktop\SMS\SMS\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Osama\Desktop\SMS\SMS\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Osama\Desktop\SMS\SMS\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Osama\Desktop\SMS\SMS\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Osama\Desktop\SMS\SMS\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Osama\Desktop\SMS\SMS\bin\Newtonsoft.Json.dll
+C:\Users\Osama\Desktop\SMS\SMS\bin\Owin.dll
+C:\Users\Osama\Desktop\SMS\SMS\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Osama\Desktop\SMS\SMS\bin\System.Web.Helpers.dll
+C:\Users\Osama\Desktop\SMS\SMS\bin\System.Web.Mvc.dll
+C:\Users\Osama\Desktop\SMS\SMS\bin\System.Web.Optimization.dll
+C:\Users\Osama\Desktop\SMS\SMS\bin\System.Web.Razor.dll
+C:\Users\Osama\Desktop\SMS\SMS\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Osama\Desktop\SMS\SMS\bin\System.Web.WebPages.dll
+C:\Users\Osama\Desktop\SMS\SMS\bin\System.Web.WebPages.Razor.dll
+C:\Users\Osama\Desktop\SMS\SMS\bin\WebGrease.dll
+C:\Users\Osama\Desktop\SMS\SMS\bin\System.Web.Helpers.xml
+C:\Users\Osama\Desktop\SMS\SMS\bin\System.Web.Mvc.xml
+C:\Users\Osama\Desktop\SMS\SMS\bin\System.Web.Optimization.xml
+C:\Users\Osama\Desktop\SMS\SMS\bin\System.Web.Razor.xml
+C:\Users\Osama\Desktop\SMS\SMS\bin\System.Web.WebPages.xml
+C:\Users\Osama\Desktop\SMS\SMS\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Osama\Desktop\SMS\SMS\bin\System.Web.WebPages.Razor.xml
+C:\Users\Osama\Desktop\SMS\SMS\bin\Newtonsoft.Json.xml
+C:\Users\Osama\Desktop\SMS\SMS\bin\Antlr3.Runtime.pdb
+C:\Users\Osama\Desktop\SMS\SMS\bin\EntityFramework.xml
+C:\Users\Osama\Desktop\SMS\SMS\bin\EntityFramework.SqlServer.xml
+C:\Users\Osama\Desktop\SMS\SMS\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Osama\Desktop\SMS\SMS\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Osama\Desktop\SMS\SMS\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Osama\Desktop\SMS\SMS\bin\Microsoft.Owin.xml
+C:\Users\Osama\Desktop\SMS\SMS\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Osama\Desktop\SMS\SMS\bin\Microsoft.Owin.Security.xml
+C:\Users\Osama\Desktop\SMS\SMS\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Osama\Desktop\SMS\SMS\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Osama\Desktop\SMS\SMS\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Osama\Desktop\SMS\SMS\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Osama\Desktop\SMS\SMS\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Osama\Desktop\SMS\SMS\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Osama\Desktop\SMS\SMS\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Users\Osama\Desktop\SMS\SMS\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+C:\Users\Osama\Desktop\SMS\SMS\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Osama\Desktop\SMS\SMS\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Osama\Desktop\SMS\SMS\bin\Microsoft.AI.Web.xml
+C:\Users\Osama\Desktop\SMS\SMS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Osama\Desktop\SMS\SMS\obj\Debug\SMS.csprojAssemblyReference.cache
+C:\Users\Osama\Desktop\SMS\SMS\obj\Debug\SMS.csproj.CoreCompileInputs.cache
+C:\Users\Osama\Desktop\SMS\SMS\obj\Debug\SMS.csproj.CopyComplete
+C:\Users\Osama\Desktop\SMS\SMS\obj\Debug\SMS.dll
+C:\Users\Osama\Desktop\SMS\SMS\obj\Debug\SMS.pdb
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\ApplicationInsights.config
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\SMS.dll.config
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\SMS.dll
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\SMS.pdb
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\roslyn\csc.exe
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\roslyn\csc.exe.config
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\roslyn\csc.rsp
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\roslyn\csi.exe
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\roslyn\csi.exe.config
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\roslyn\csi.rsp
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\roslyn\System.AppContext.dll
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\roslyn\System.Console.dll
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\roslyn\System.IO.Compression.dll
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\roslyn\System.IO.Pipes.dll
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\roslyn\System.Security.Claims.dll
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\roslyn\System.ValueTuple.dll
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\roslyn\vbc.exe
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\roslyn\vbc.exe.config
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\roslyn\vbc.rsp
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\roslyn\VBCSCompiler.exe
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\Antlr3.Runtime.dll
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\EntityFramework.dll
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\EntityFramework.SqlServer.dll
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\Microsoft.AI.Web.dll
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\Microsoft.Owin.dll
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\Microsoft.Owin.Security.dll
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\Newtonsoft.Json.dll
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\Owin.dll
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\System.Web.Helpers.dll
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\System.Web.Mvc.dll
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\System.Web.Optimization.dll
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\System.Web.Razor.dll
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\System.Web.WebPages.dll
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\System.Web.WebPages.Razor.dll
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\WebGrease.dll
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\System.Web.Helpers.xml
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\System.Web.Mvc.xml
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\System.Web.Optimization.xml
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\System.Web.Razor.xml
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\System.Web.WebPages.xml
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\System.Web.WebPages.Razor.xml
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\Newtonsoft.Json.xml
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\Antlr3.Runtime.pdb
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\EntityFramework.xml
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\EntityFramework.SqlServer.xml
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\Microsoft.Owin.xml
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\Microsoft.Owin.Security.xml
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\Microsoft.AI.Web.xml
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\obj\Debug\SMS.csprojAssemblyReference.cache
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\obj\Debug\SMS.csproj.CoreCompileInputs.cache
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\obj\Debug\SMS.csproj.CopyComplete
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\obj\Debug\SMS.dll
+C:\Users\Khali\OneDrive\سطح المكتب\SMS\SMS\obj\Debug\SMS.pdb
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\ApplicationInsights.config
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\SMS.dll.config
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\SMS.dll
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\SMS.pdb
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\roslyn\csc.exe
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\roslyn\csc.exe.config
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\roslyn\csc.rsp
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\roslyn\csi.exe
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\roslyn\csi.exe.config
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\roslyn\csi.rsp
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\roslyn\System.AppContext.dll
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\roslyn\System.Console.dll
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\roslyn\System.IO.Compression.dll
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\roslyn\System.IO.Pipes.dll
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\roslyn\System.Security.Claims.dll
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\roslyn\System.ValueTuple.dll
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\roslyn\vbc.exe
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\roslyn\vbc.exe.config
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\roslyn\vbc.rsp
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\roslyn\VBCSCompiler.exe
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\Antlr3.Runtime.dll
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\EntityFramework.dll
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\EntityFramework.SqlServer.dll
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\Microsoft.AI.Web.dll
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\Microsoft.Owin.dll
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\Microsoft.Owin.Security.dll
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\Newtonsoft.Json.dll
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\Owin.dll
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\System.Web.Helpers.dll
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\System.Web.Mvc.dll
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\System.Web.Optimization.dll
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\System.Web.Razor.dll
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\System.Web.WebPages.dll
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\System.Web.WebPages.Razor.dll
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\WebGrease.dll
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\System.Web.Helpers.xml
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\System.Web.Mvc.xml
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\System.Web.Razor.xml
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\System.Web.WebPages.xml
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\System.Web.WebPages.Razor.xml
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\System.Web.Optimization.xml
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\Newtonsoft.Json.xml
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\Antlr3.Runtime.pdb
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\EntityFramework.xml
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\EntityFramework.SqlServer.xml
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\Microsoft.Owin.xml
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\Microsoft.Owin.Security.xml
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\Microsoft.AI.Web.xml
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\obj\Debug\SMS.csprojAssemblyReference.cache
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\obj\Debug\SMS.csproj.CoreCompileInputs.cache
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\obj\Debug\SMS.csproj.CopyComplete
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\obj\Debug\SMS.dll
+C:\Users\Khali\OneDrive\سطح المكتب\Last Ver\SMS\SMS\obj\Debug\SMS.pdb

@@ -1,0 +1,214 @@
+/* back ground color  main color color is font color */
+html, body{
+	font-family: "open sans","helvetica Neue", Helvetica, Arialrial, sans-serif;
+	background-color: #f4f6f4; 
+	color: #676a6c;
+	height:100%;
+
+
+}
+
+.box {
+    border: none;
+}
+#side-menu{
+	background-color : #6C6488;
+	padding: 0px;
+}
+#side-menu h1{
+	color:#FFF;
+	text-align:center;
+	margin: 10px, 0px;
+	font-size: 25px;
+}
+#side-menu ul{
+	list-style:none;
+	margin:0px;
+	padding:0px;
+	
+}
+#side-menu a{
+	padding:12px 20px;
+	text-decoration:none;
+	color:#9fb1c2;
+	font-weight:bold;
+	font-size:14px;
+	display: block;
+}
+#side-menu .glyphicon{
+	margin-right:7px;
+}
+#side-menu a:hover{
+	background-color:#6bbaa7;
+	color:#fff;
+	display:block;
+}
+#side-menu .active a {
+	color:#fff;
+	background-color:#6bbaa7;
+}
+#side-menu .setting-btn{
+	background-color:#6bbaa7;
+}
+#side-menu .setting-btn a{
+	color:#fff;
+}
+#side-menu .setting-btn a:hover{
+	background-color:#1ab394;
+}
+#side-menu .collapseable li{
+	padding-left:20px;
+	padding-top:5px;
+}
+#side-menu .collapseable a{
+	color:#9fb1c2;
+	font-size:13px;
+	padding:0px 10px;
+	display:black;
+}
+#side-menu .collapseable a:hover{
+	color:#fff;
+	
+}
+#side-menu .collapseable{
+	border-left:4px solid #fba100;
+	background-color:#605684;
+}
+#side-menu .link >ul >li{
+	padding-bottom:10px;
+}
+.display-table{
+	display: table;
+	padding: 0px;
+	height:100%;
+	width:100%;
+}
+.display-table-row{
+	display:table-row;
+	height:100%;
+}
+.display-table-cell{
+	display: table-cell;
+	float:none;
+	height:100%;
+}
+.valign-top{
+	vertical-align: top;
+}
+#nav-header{
+	background-color:#6bbaa7;
+	border-bottom: 1px solid #e7eaec;
+	/*to color the top nav bar */
+}
+#nav-header #header-search-field{
+	background-color:#f4f6f4;
+	padding-top:-17px;
+	margin-top:10px;
+	vertical-align: center;
+    border-radius: 25px;
+	border: 2px solid #fba100;
+	width:300px;
+	height:30px;
+	outline:none;
+	
+	/* to show the searchbar without outlines or borders */
+}
+#nav-header ul {
+	margin:0px;
+	padding:0px;
+	list-style: none;
+	color: #fff;
+}
+#nav-header ul li {
+	float:left;
+	margin-left:15px;   /* to make the border smaller and make them side to eash other */
+	padding:15px 0px;
+}
+.lable-message{
+	background-color: #fba100;  /* to change the color of the number on the icons top right corner*/
+}
+#nav-header ul a {
+	text-decoration: none;
+}
+#nav-header .logout{  /* cahnge color of logout button*/
+	color:#fba100;
+	font-weight: bold;
+}
+#nav-header .logout:hover{ /*to change the color when hover over logout*/
+	color:#fff;
+}
+#nav-header #welcome{
+	margin-right:20px;
+}
+#nav-header ul .label {
+	position:absolute;
+	margin-top:-10px;
+	margin-left:-5px;
+}
+#nav-header .fixed-width{
+	width:35px;
+	
+}
+#footer{
+	position:absolute;
+	width:100%;
+	bottom:0px;
+	background-color:#6BBAA7;
+	padding: 10px;
+	font-size:12px;
+	color: #fff;
+}
+.navbar-default{
+	background-color:#6bbaa7;
+}
+.navbar-default .navbar-toggle{
+	border-color:#fba100;
+	background-color:#fba100;
+}
+.navbar-default .icon-bar {
+	border: 1px white solid;
+}
+
+.navbar-default .navbar-toggle:hover{
+	background-color:#fba100;
+}
+.navbar-default .navbar-toggle:focus{
+	background-color:#fba100;
+}
+
+
+.navbar-default .navbar-toggle:hover{
+	background-color:fba100;
+}
+.navbar-default .navbar-toggle:focus{
+	background-color:#fba100;
+}
+
+
+#content {
+	margin:20px 0px 50px 0px;
+	background-color:#fff;
+	border-top:4px #fba100 solid;
+	text-decoration:none;
+}
+#content header{
+	border-bottom: 1px #f3f3f4 solid;
+	padding: 10px 20px;
+}
+.page-title{
+	font-size:14px;
+	font-weight:bold;
+	margin:0px;
+	text-decoration:none;
+	
+}
+.content-inner{
+	padding:20px;
+}
+
+
+
+
+
+
+

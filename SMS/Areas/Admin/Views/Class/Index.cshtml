@@ -1,0 +1,196 @@
+﻿@model SMS.Models.Class
+@{
+    ViewBag.Title = "Index";
+}
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<h2 id="heads">ClassList</h2>
+
+<!-- The Modal -->
+<div class="modal" id="ClassModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+
+            <div class="modal-header">
+                <h4 class="modal-title"></h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <label>Class Name</label>
+                <input type="text" id="ClassName" name="ClassName" value="" class="form-control" />
+                <input type="hidden" id="ClassId" name="ClassId" value="0" />
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+
+                <button id="formSubmit" type="button" class="btn btn-info" onclick="sweet(); ">Save</button>
+
+
+                <script>
+                    function sweet() {
+
+                        swal({
+                            position: 'center',
+                            type: 'success',
+                            title: 'Your Class has been saved',
+                            icon: 'success',
+                            showConfirmButton: false,
+                            timer: 1500
+                        })
+                    };
+                </script>
+
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<button id="btn-add" class="btn btn-info pull-left" style="margin-right:10px;">Add new</button>
+
+<div class="container">
+
+    <div class="form-group">
+        <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+            <input type="text" id="Search" placeholder="Search" class="form-control" />
+        </div>
+    </div>
+</div>
+<table class="table table-hover" id="ClassTable"></table>
+
+
+
+
+
+<script>
+    function TargetJs() {
+
+        $('#btn-add').click(function () {
+            $('#ClassModal .modal-title').text('Add new class');
+            $('#ClassModal').modal();
+            $("#ClassName").val('')
+            $("#ClassId").val(0)
+        })
+        GetClasses();
+        function GetClasses() {
+            $.ajax({
+                url: "http://localhost:60487/Admin/Class/ViewClasses",
+                success: function (data) {
+                    $('#ClassTable').html(data);
+                }
+            });
+
+        }
+
+        $('body').on('click', '#formSubmit', function () {
+
+            var ClassName = $('#ClassName').val();
+            var ClassId = $("#ClassId").val();
+
+            if (ClassId == 0) {
+
+                $.ajax({
+                    type: 'POST',
+                    url: 'http://localhost:60487/Admin/class/ClassForm',
+                    data: { Name: ClassName },
+                    success: function () {
+                        GetClasses();
+                        $('#ClassModal').modal('hide');
+                        $("#ClassName").val('')
+                        $("#ClassId").val('')
+
+
+
+                    }
+                });
+            }
+
+            else {
+                $.ajax({
+                    type: 'POST',
+                    url: 'http://localhost:60487/Admin/class/Edit',
+                    data: { Name: ClassName, class_id: ClassId },
+                    success: function () {
+                        GetClasses();
+                        $('#ClassModal').modal('hide');
+                        $("#ClassName").val('')
+                        $("#ClassId").val(0)
+
+
+                    }
+                });
+
+
+            }
+
+
+        });
+
+
+
+        $('body').on("click", ".btn-delete", function () {
+            var id = $(this).data('id');
+            var result = swal({
+                title: "Are you sure?",
+                text: "Once deleted, you will not be able to recover this Class Data",
+                icon: "warning",
+                buttons: true,
+                dangerMode: true,
+            })
+                .then((willDelete) => {
+                    if (willDelete) {
+                        $.ajax({
+
+                            url: "http://localhost:60487/Admin/class/DeleteClass?id=" + id,
+
+                            success: function () {
+                                GetClasses();
+                            }
+                        })
+                        swal("Your Class is now Deleted!", {
+                            icon: "success",
+                        });
+                    } else {
+                        swal("Your Class List is Saved");
+                    }
+                });
+
+
+            if (result) {
+                 
+
+              
+            }
+        })
+
+        $('body').on("click", '.btn-edit', function () {
+
+            $('#ClassModal .modal-title').text('Edit new Class');
+            $('#ClassModal').modal();
+            var Class_id = $(this).data('id');
+
+            $.ajax({
+
+                url: 'http://localhost:60487/Admin/Class/GetClass?class_id=' + Class_id,
+
+                success: function (data) {
+
+                    $("#ClassName").val(data.ClassName)
+                    $("#ClassId").val(data.ClassId)
+
+                }
+            });
+        })
+
+
+    }
+</script>
+

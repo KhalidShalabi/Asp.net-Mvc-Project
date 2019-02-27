@@ -1,0 +1,208 @@
+﻿@model SMS.Models.ClassMaterial
+
+@{
+    ViewBag.Title = "ViewClassM";
+}
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<!-- The Modal -->
+<div class="modal" id="ClassModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title"></h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <form>
+                    <label>Class Name</label>
+                    @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+                    <input type="hidden" id="ClassMaterialsId" name="ClassMaterialsId" value="0" />
+
+                </form>
+
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                <button id="formSubmit" type="button" class="btn btn-primary" onclick="sweet();">Save</button>
+            </div>
+            <script>
+                function sweet() {
+
+                    swal({
+                        position: 'center',
+                        type: 'success',
+                        title: 'Your Material has been saved',
+                        showConfirmButton: false,
+                        timer: 1500
+                    })
+                };
+            </script>
+
+        </div>
+    </div>
+</div>
+
+<h2 id="heads">Class Materials</h2>
+
+
+<button id="btn-add" class="btn btn-info pull-left" style="margin-right:1%;">Add new</button>
+@* Container of the data from get request *@
+<div class="container">
+    <div class="form-group">
+        <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+            <input type="text" id="Search" placeholder="Search" class="form-control" />
+        </div>
+    </div>
+</div>
+<table class="table table-bordered " id="ClassTable"></table>
+
+
+
+
+<script>
+
+    function TargetJs() {
+
+
+        $('#btn-add').click(function () {
+            $('#ClassModal .modal-title').text('Add new classMaterilas');
+            $('#ClassModal').modal();
+            $("#ClassMName").val('')
+            $("#ClassMId").val(0)
+        })
+
+
+
+        //Get DataFrom the table
+        GetClassM();
+        function GetClassM() {
+            $.ajax({
+
+                url: 'http://localhost:60487/Admin/ClassMaterials/ClassTable',
+                type: "get",
+                dataType: "text",
+                contentType: "application/text ; charset=utf-8",
+                success: function (data) {
+                    $("#ClassTable").html(data);
+                }
+
+            })
+        }
+
+
+
+
+        //Add
+        $('body').on('click', '#formSubmit', function () {
+
+            var ClassName = $('#Name').val();
+            var ClassId = $("#ClassMaterialsId").val();
+
+            if (ClassId == 0) {
+
+                $.ajax({
+                    type: 'POST',
+                    url: 'http://localhost:60487/Admin/ClassMaterials/Submit',
+                    data: { classMname: ClassName },
+
+                    success: function () {
+
+                        GetClassM();
+
+                        $('#ClassModal').modal('hide');
+                        $("#Name").val('')
+                        $("#ClassMaterialsId").val('')
+                    }
+                });
+            }
+
+
+            //Update
+            else {
+                $.ajax({
+
+                    type: "Post",
+                    url: 'http://localhost:60487/Admin/ClassMaterials/Edit',
+                    data: { ClassMName: ClassName, ClassId: ClassId },
+                    success: function () {
+                        GetClassM();
+                        $('#ClassModal').modal('hide');
+                        $('#Name').val('');
+                        $("#ClassMaterialsId").val('')
+
+                    }
+                })
+            }
+        });
+
+
+
+        $('body').on("click", '#btn-edit', function () {
+
+            $('#ClassModal .modal-title').text('Edit new Class');
+            $('#ClassModal').modal();
+            var id = $(this).data('id');
+
+            $.ajax({
+
+                url: 'http://localhost:60487/Admin/ClassMaterials/Get?Id=' + id,
+
+                success: function (data) {
+
+                    $("#Name").val(data.Name)
+                    $("#ClassMaterialsId").val(data.ClassMaterialsId)
+
+                }
+            })
+        })
+
+
+
+        $('body').on("click", ".btn-delete", function () {
+            var id = $(this).data('id');
+            var result = swal({
+                title: "Are you sure?",
+                text: "Once deleted, you will not be able to recover this Material Data",
+                icon: "warning",
+                buttons: true,
+                dangerMode: true,
+            })
+                .then((willDelete) => {
+                    if (willDelete) {
+                        $.ajax({
+
+                            url: "http://localhost:60487/Admin/classMaterials/Delete?Id=" + id,
+
+                            success: function () {
+                                GetClassM();
+                            }
+                        })
+                        swal("Your Material is now Deleted!", {
+                            icon: "success",
+                        });
+                    } else {
+                        swal("Your Material List is Saved");
+                    }
+                });
+            if (result) {
+               
+            }
+        })
+
+    }
+
+
+</script>
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+
+
+    

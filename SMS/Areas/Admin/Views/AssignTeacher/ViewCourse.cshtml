@@ -1,0 +1,35 @@
+﻿@model IEnumerable<SMS.Models.TeacherCours>
+
+@{
+    ViewBag.Title = "ViewCourse";
+}
+
+<h2 id="heads">ViewCourse</h2>
+
+
+<table class="table table-bordered" style="width:70%; margin-left:15%; margin-right:15%;" id="MyTable" >
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Cours.CoursesTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Teacher.FullName)
+        </th>
+        
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cours.CoursesTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Teacher.FullName)
+        </td>
+       
+    </tr>
+}
+
+</table>
+
+    

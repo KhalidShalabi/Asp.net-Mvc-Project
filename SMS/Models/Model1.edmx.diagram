@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d4af536252dd4af385c609dd327e6278" Name="Diagram1">
+        <EntityTypeShape EntityType="masterModel.C__MigrationHistory" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="masterModel.AssigmentGrade" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="masterModel.Assigment" Width="1.5" PointX="8.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="masterModel.Class" Width="1.5" PointX="1.5" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="masterModel.ClassMaterial" Width="1.5" PointX="1.5" PointY="17.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="masterModel.Cours" Width="1.5" PointX="0.75" PointY="12.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="masterModel.DayDate" Width="1.5" PointX="3" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="masterModel.Day" Width="1.5" PointX="0.75" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="masterModel.Hostel" Width="1.5" PointX="8.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="masterModel.Library" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="masterModel.Manager" Width="1.5" PointX="8.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="masterModel.Parent" Width="1.5" PointX="10.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="masterModel.Section" Width="1.5" PointX="3.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="masterModel.StudentAttindence" Width="1.5" PointX="6" PointY="16.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="masterModel.Student" Width="1.5" PointX="3.75" PointY="15.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="masterModel.StudentsGrade" Width="1.5" PointX="6" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="masterModel.StudySchedule" Width="1.5" PointX="3" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="masterModel.TeacherCours" Width="1.5" PointX="3" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="masterModel.Teacher" Width="1.5" PointX="0.75" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="masterModel.TeacherSection" Width="1.5" PointX="6" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="masterModel.MSreplication_options" Width="1.5" PointX="10.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="masterModel.spt_fallback_db" Width="1.5" PointX="10.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="masterModel.spt_fallback_dev" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="masterModel.spt_fallback_usg" Width="1.5" PointX="12.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="masterModel.spt_monitor" Width="1.5" PointX="12.75" PointY="8.75" IsExpanded="true" />
+        <AssociationConnector Association="masterModel.FK_dbo_Courses_dbo_Classes_ClassId" ManuallyRouted="false" />
+        <AssociationConnector Association="masterModel.FK_Sections_Classes" ManuallyRouted="false" />
+        <AssociationConnector Association="masterModel.FK_StudentsGrade_Classes" ManuallyRouted="false" />
+        <AssociationConnector Association="masterModel.FK_dbo_Courses_dbo_ClassMaterials_ClassMaterialsId" ManuallyRouted="false" />
+        <AssociationConnector Association="masterModel.FK_StudentsGrade_Courses" ManuallyRouted="false" />
+        <AssociationConnector Association="masterModel.FK_StudySchedule_Courses" ManuallyRouted="false" />
+        <AssociationConnector Association="masterModel.FK_TeacherCourses_Courses" ManuallyRouted="false" />
+        <AssociationConnector Association="masterModel.FK_DayDates_Teachers" ManuallyRouted="false" />
+        <AssociationConnector Association="masterModel.FK_StudySchedule_Days" ManuallyRouted="false" />
+        <AssociationConnector Association="masterModel.FK_dbo_Students_dbo_Sections_SectionId" ManuallyRouted="false" />
+        <AssociationConnector Association="masterModel.FK_dbo_TeacherSections_dbo_Sections_SectinId" ManuallyRouted="false" />
+        <AssociationConnector Association="masterModel.FK_StudentsGrade_Sections" ManuallyRouted="false" />
+        <AssociationConnector Association="masterModel.FK_StudySchedule_Sections" ManuallyRouted="false" />
+        <AssociationConnector Association="masterModel.FK_StudentAttindence_Students" ManuallyRouted="false" />
+        <AssociationConnector Association="masterModel.FK_StudentsGrade_Students" ManuallyRouted="false" />
+        <AssociationConnector Association="masterModel.FK_StudentsGrade_Students1" ManuallyRouted="false" />
+        <AssociationConnector Association="masterModel.FK_StudentsGrade_Teachers" ManuallyRouted="false" />
+        <AssociationConnector Association="masterModel.FK_StudySchedule_Teachers" ManuallyRouted="false" />
+        <AssociationConnector Association="masterModel.FK_dbo_TeacherCourses_dbo_Teachers_TeacherId" ManuallyRouted="false" />
+        <AssociationConnector Association="masterModel.FK_dbo_TeacherSections_dbo_Teachers_TeacherId" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="masterModel.Event" Width="1.5" PointX="6.375" PointY="12.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

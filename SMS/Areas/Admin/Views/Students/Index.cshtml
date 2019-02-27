@@ -1,0 +1,64 @@
+﻿@model IEnumerable<SMS.Models.Student>
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<input type="hidden" id="section_id" name="section_id" value="@Request.Params["section_id"]" />
+<input type="hidden" id="class_id" name="class_id" value="@Request.Params["class_id"]" />
+
+
+<table class="table  table-striped" id="MyTable"></table>
+
+<script>
+    function TargetJs() {
+        GetStudents()
+        function GetStudents() {
+            var section_id = $("#section_id").val();
+            var class_id = $("#class_id").val();
+            $.ajax({
+                url: "http://localhost:60487/Admin/Students/Get?section_id=" + section_id + "&class_id=" + class_id,
+                success: function (data) {
+
+                    $('#MyTable').html(data)
+                }
+            });
+
+        }
+
+
+
+        $('body').on("click", ".btn-delete", function () {
+            var id = $(this).data('id');
+
+
+            var result = swal({
+                title: "Are you sure?",
+                text: "Once deleted, you will not be able to recover this Class Data",
+                icon: "warning",
+                buttons: true,
+                dangerMode: true,
+            })
+                .then((willDelete) => {
+                    if (willDelete) {
+                        $.ajax({
+
+                            url: "http://localhost:60487/Admin/students/Delete?id=" + id,
+
+                            success: function () {
+
+                                GetStudents();
+                            }
+                        })
+                        swal("Your Class is now Deleted!", {
+                            icon: "success",
+                        });
+                    } else {
+                        swal("Your Class List is Saved");
+                    }
+                });
+           
+        })
+    }
+
+</script>

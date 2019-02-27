@@ -1,0 +1,15 @@
+﻿@model IEnumerable<SMS.Models.Section>
+@{
+    ViewBag.Title = "ViewSectionsList";
+    Layout = null;
+}
+
+<select class="" id="Section">
+    @foreach (var item in Model)
+    {
+
+        <option value="@item.SectionId">@item.Name</option>
+       
+
+    }
+</select>

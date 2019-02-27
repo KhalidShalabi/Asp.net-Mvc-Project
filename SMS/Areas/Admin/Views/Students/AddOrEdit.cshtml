@@ -1,0 +1,207 @@
+﻿@model SMS.Models.Student
+
+@{
+    ViewBag.Title = "AddOrEdit";
+}
+
+
+@using (Html.BeginForm("AddAction", "Students", FormMethod.Post, new { enctype = "multipart/form-data" }))
+
+{
+    <h2 id="heads">Add Studnet</h2>
+    @Html.AntiForgeryToken()
+
+    <div class="style">
+        <div class="form-horizontal">
+
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            @Html.HiddenFor(x => x.StudentId)
+            <input type="hidden" name="ImagePath" value="" />
+            <input type="hidden" name="StPassword" value="" />
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="control-label col-md-2">FirstName</label>
+                        <div class="col-md-10">
+                            @*@Html.TextBox("StFirstName", null, new { @class = "form-control" })*@
+                            <input type="text" name="StFirstName" value="" class="form-control" required/>
+                            @Html.ValidationMessageFor(m => m.StFirstName, "", new { @class = "text-danger" })
+
+
+        
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-2">SecondName </label>
+                        <div class="col-md-10">
+                            <input type="text" name="StSecondName" value="" class="form-control" required />
+                         @*   @Html.TextBox("StSecondName", null, new { @class = "form-control" })*@
+                            @Html.ValidationMessageFor(m => m.StSecondName, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-2">LastName </label>
+                        <div class="col-md-10">
+                            <input type="text" name="StLastName" value="" class="form-control" required />
+                            @*  @Html.TextBox("StLastName", null, new { @class = "form-control" })*@
+                            @Html.ValidationMessageFor(m => m.StLastName, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-2">Address </label>
+
+                        <div class="col-md-10">
+                            <input type="text" name="StAddress" value="" class="form-control" required />
+                            @* @Html.TextBox("StAddress", null, new { @class = "form-control" })*@
+                            @Html.ValidationMessageFor(m => m.StAddress, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-2">DateOfBirth </label>
+                        <div class="col-md-10">
+                            
+                            @Html.TextBox("StDOB", null, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(m => m.StDOB, "", new { @class = "text-danger" })
+
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+                    <div class="form-group">
+                        <label class="control-label col-md-2">PhoneNumber </label>
+                        <div class="col-md-10">
+                            <input type="text" name="PhoneNumber" value="" class="form-control" required />
+                            @* @Html.TextBox("PhoneNumber", null, new { @class = "form-control" })*@
+                            @Html.ValidationMessageFor(m => m.PhoneNumber, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-2">Email </label>
+                        <div class="col-md-10">
+                            <input type="text" name="Email" value="" class="form-control" required />
+                            @*@Html.TextBox("Email", null, new { @class = "form-control" })*@
+                            @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label class="control-label  col-md-2">Gender </label>
+                        <div class="radio col-md-10">
+                            Male: &nbsp;  &nbsp; &nbsp;  @Html.RadioButton("Gender", false, new { id = "Male" })
+                            Female: &nbsp; &nbsp; &nbsp; @Html.RadioButton("Gender", true, new { id = "Female" })
+                            @Html.ValidationMessageFor(m => m.Gender, "", new { @class = "text-danger" })
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="form-group">
+                        <label class="control-label col-md-2">NationalNumber </label>
+                        <div class="col-md-10">
+                            <input type="text" name="National_Number" value="" class="form-control" required />
+                          @*@  @Html.TextBox("National_Number", null, new { @class = "form-control" })*@
+                            @Html.ValidationMessageFor(m => m.National_Number, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-2">Classes </label>
+
+                        <div class="col-md-10">
+                            @*<select name="ClassList" class="form-control" id="Classes" />*@
+
+                            @Html.DropDownList("ClassList", null, "Select Class", htmlAttributes: new { @class = "form-control", id = "Classes" })
+
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-2">Section Name</label>
+                        <div class="col-md-10">
+                            <select id="Section" name="Section" class="form-control">
+                                <option value="">Choose Class First</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" id="submit" value="Submit" onclick="sub();" class="btn btn-info" />
+                        </div>
+                    </div>
+                </div>
+
+               
+
+                
+
+            </div>
+        </div>
+    </div>
+}
+<style>
+    .field-validation-error {
+        color: red;
+        margin-left:10%;
+        font-weight: bold;
+    }
+    .input-validation-error {
+        border: 1px solid red;
+    }
+</style>
+
+<script>
+
+    var sub = function () {
+        var data = $("#style").serialize();
+        if (!$("#style").valid()) {
+            return false;
+        }
+    }
+
+
+    function TargetJs() {
+
+        $('#Classes').change(function () {
+            class_id = $(this).val();
+
+            $.ajax({
+                url: "http://localhost:60487/Admin/students/ViewSectionsList?class_id=" + class_id,
+                success: function (data) {
+                    $('#Section').html(data);
+                }
+            });
+        })
+
+
+
+    }
+
+    function ShowImagePreview(imageUploader, previewImage) {
+
+        if (imageUploader.files && imageUploader.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                $(previewImage).attr('src', e.target.result);
+            }
+            reader.readAsDataURL(imageUploader.files[0]);
+        }
+    }
+
+
+
+
+</script>
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>

@@ -1,0 +1,35 @@
+﻿@model IEnumerable<SMS.Models.Cours>
+
+
+@{
+    ViewBag.Title = "View Courses";
+    Layout = null;
+}
+
+<div style="overflow: scroll;height: 400px; width: 70%;margin-left:15%;margin-right:15%;">
+    <table class="table  table-hover" id="SectionTable" style="width:99%;margin-left:0%;margin-right:0%;">
+        <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Class Materilas</th>
+            <th>Actions</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr class="Search">
+                <td>@item.CoursesTitle</td>
+                <td>@item.Description</td>
+                <td>@item.ClassMaterial.Name</td>
+                <td>
+                    <button class="btn btn-warning " id="btn-edit" data-id="@item.CoursesId"><i class="glyphicon glyphicon-pencil"></i></button>
+                    <button class="btn btn-danger btn-delete" data-id="@item.CoursesId"><i class="glyphicon glyphicon-trash"></i></button>
+                    <button class="btn btn-info "><i class="glyphicon glyphicon-user"></i><a href="http://localhost:60487/Admin/assignTeacher/ViewCourse?Course_id=@item.CoursesId&class_id=@Request.Params["class_id"]">Teachers</a></button>
+
+                </td>
+            </tr>
+        }
+
+
+    </table>
+   </div>
+    <script src="~/Content/admin/js/default.js"></script>

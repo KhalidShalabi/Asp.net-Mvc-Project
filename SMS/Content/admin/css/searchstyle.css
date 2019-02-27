@@ -1,0 +1,27 @@
+﻿
+.container {
+    width: 60%;
+}
+
+.container #Search {
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.container .input-group {
+    border-radius: 15px;
+    border: 2px solid #DC143C;
+}
+
+.container .form-group {
+    border-radius: 15px;
+}
+
+.container .input-group :focus {
+    border: 2px solid #fba100;
+}
+
+.container .input-group-addon {
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}

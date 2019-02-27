@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+<h2 id="heads">Assigns</h2>
+<div class="style2" style="margin-left:10%">
+    @using (Html.BeginForm("Submit", "AssignTeacher", FormMethod.Post))
+    {
+
+        <label>Assign Teacher To Course</label>
+        @Html.DropDownList("TeacherList", null, "Chose Teacher", new { @class = "form-control" })
+        <br />
+        @Html.DropDownList("CourseList", null, "Chose Course", new { @class = "form-control" })
+        <br />
+
+
+        <label>Assign Teacher To Section</label>
+        @Html.DropDownList("TeacherList", null, "Chose Teacher", new { @class = "form-control" })
+        <br />
+        @Html.DropDownList("SectionList", null, "Chose Section", new { @class = "form-control" })
+        <br />
+
+        <center>  <input type="submit" name="Assign" value="Assign" class="btn btn-info btn-md" onclick="sweet();" /></center>
+        <script>
+            function sweet() {
+
+                swal({
+                    position: 'center',
+                    type: 'success',
+                    title: 'Your Class has been saved',
+                    icon: 'success',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
+            };
+        </script>
+
+    }
+</div>
+
+   

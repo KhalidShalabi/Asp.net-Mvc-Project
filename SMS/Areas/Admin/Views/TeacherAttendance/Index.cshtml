@@ -1,0 +1,41 @@
+﻿@model IEnumerable<SMS.Models.Teacher>
+@{
+    ViewBag.Title = "Index";
+}
+
+
+@using (Html.BeginForm("submit", "TeacherAttendance", FormMethod.Post))
+{
+    <H2 id="heads">Teacher Attendance </H2>
+
+    <div class="form-horizontal">
+         <h4>Today's Date/Time: @DateTime.Now</h4>
+ 
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+
+        <table id="MyTable" style="width: 70% ;margin-left:15%; margin-right:15%;" class="table table-bordered">
+            <tr>
+                <th>Teachers</th>
+                <th>Attendance</th>
+            </tr>
+            @foreach (var x in Model)
+            {
+                <tr>
+                    <td>@x.ThFirstName @x.ThLastName</td>
+                    <td>
+
+                        <input type="checkbox" name="TeacherId[]" value="@x.TeacherId" /> Absent
+                    </td>
+                </tr>
+
+            }
+        </table>
+        <center> <input type="submit" value="Save" class="btn btn-info" /></center>
+
+    </div>
+
+}
+
+
+   

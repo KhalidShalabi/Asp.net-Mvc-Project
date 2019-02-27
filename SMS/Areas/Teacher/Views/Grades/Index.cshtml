@@ -1,0 +1,39 @@
+﻿@model SMS.Models.StudentsGrade
+@{
+    ViewBag.Title = "Grades";
+}
+
+<h2>Grades</h2>
+
+@using (Html.BeginForm("Submit", "Grades", FormMethod.Post))
+{
+    <label>Choose Class</label>
+    @Html.DropDownList("ClassList", null, new { @class = "form-control" })
+
+    <label>Choose Section</label>
+    @Html.DropDownList("SectionList", null, new { @class = "form-control" })
+
+    <label>Choose Course</label>
+    @Html.DropDownList("CourseList", null, new { @class = "form-control" })
+
+    <label>Choose Student</label>
+    @Html.DropDownList("StudentList", null, new { @class = "form-control" })
+
+    <label>First Grade</label>
+    @Html.TextBoxFor(x => x.FirstGrade, new { @class = "form-control" })
+
+
+    <label>Second Grade</label>
+    @Html.TextBoxFor(x => x.SecondGrade, new { @class = "form-control" })
+
+
+    <label>Third Grade</label>
+    @Html.TextBoxFor(x => x.ThirdGrade, new { @class = "form-control" })
+
+
+    <label>Final Grade</label>
+    @Html.TextBoxFor(x => x.FinalGrade, new { @class = "form-control" })
+
+    <input type="submit" name="Add" class="btn btn-primary" />
+
+}

@@ -1,0 +1,86 @@
+﻿@model IEnumerable<SMS.Models.Teacher>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Teachers</h2>
+
+
+<table class="table table-striped table-bordered">
+    <tr>
+        <th>
+            Name
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ThAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ThHireDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ThDegree)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ThExperience)
+        </th>
+      
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Gender)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BirthDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Image)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Password)
+        </th>
+        <th>Actions</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @item.ThFirstName @item.ThSecondName @item.ThLastName
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ThAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ThHireDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ThDegree)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ThExperience)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Gender)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BirthDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Image)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Password)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.TeacherId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.TeacherId })|
+            @Html.ActionLink("Add Teacher","Create")
+        </td>
+    </tr>
+}
+
+</table>

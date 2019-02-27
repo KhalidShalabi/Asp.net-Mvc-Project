@@ -1,0 +1,223 @@
+﻿@model  IEnumerable<SMS.Models.Section>
+@{
+    ViewBag.Title = "Index";
+}
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<h2 id="heads">Add Sections</h2>
+
+<!-- The Modal -->
+<div class="modal" id="SectionModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title"></h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <label>Section Name</label>
+                <input type="text" id="Name" name="Name" value="" class="form-control" />
+                @Html.ValidationMessage("Name", new { @class = "text-danger" })
+                @* Get ClassId fromm parameters of index controller *@
+                <input type="hidden" id="ClassId" name="ClassId" value="@Request.Params["class_id"]" />
+                <input type="hidden" id="SectionId" name="SectionId" value="0" />
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                <button id="formSubmit" type="button" class="btn btn-primary" onclick="sweet23()">Save</button>
+            </div>
+            <script>
+                function sweet23() {
+
+                    swal({
+                        position: 'center',
+                        type: 'success',
+                        title: 'Your Section has been saved',
+                        icon: 'success',
+                        showConfirmButton: false,
+                        timer: 1500
+                    })
+                };
+            </script>
+
+        </div>
+    </div>
+</div>
+
+
+<button id="btn-add" class="btn btn-info pull-left" style="margin-right:10px;">Add new</button>
+@* This data showing first when we link to section *@
+<div class="container">
+    <div class="form-group">
+        <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+            <input type="text" id="Search" placeholder="Search" class="form-control" />
+        </div>
+    </div>
+</div>
+<table class="table table-bordered table-hover" id="SectionTable">
+    <tr>
+
+        <th>Section</th>
+        <th>Actions</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr class="Search">
+
+            <td>@item.Name</td>
+            <td>
+                <button class="btn btn-warning btn-edit" data-id="@item.SectionId"><i class="glyphicon glyphicon-pencil"></i></button>
+                <button style="background-color:red;" class="btn btn-delete" data-id="@item.SectionId"><i class="glyphicon glyphicon-trash"></i></button>
+                <button class="btn btn-info "><i class="glyphicon glyphicon-ruble"></i><a href="http://localhost:60487/Admin/students/Index?section_id=@item.SectionId&class_id=@Request.Params["class_id"]">Students</a></button>
+                <button  class="btn btn-info "><i class="glyphicon glyphicon-signal"></i><a href="http://localhost:60487/Admin/AssignTeacher/ViewTeacher?section_id=@item.SectionId&class_id=@Request.Params["class_id"]">Teachers</a></button>
+
+
+            </td>
+        </tr>
+    }
+
+</table>
+
+
+
+<script>
+    //Target insted of adding jquery script we create function in layout then call it
+    function TargetJs() {
+
+        $('#btn-add').click(function () {
+            $('#SectionModal .modal-title').text('Add new Section');
+            $('#SectionModal').modal();
+            $("#Name").val('')
+            $("#SectionId").val(0)
+        })
+
+        //Get The Data After Adding
+        function GetSection() {
+            var class_id = $("#ClassId").val();
+            $.ajax({
+                url: "http://localhost:60487/Admin/section/ViewSection?class_id=" + class_id,
+                success: function (data) {
+                    $('#SectionTable').html(data);
+                }
+            });
+
+        }
+
+        //Submit The Form using ajax
+        $('body').on('click', '#formSubmit', function () {
+
+            //Read the txt
+            var Name = $('#Name').val();
+            var class_id = $("#ClassId").val();
+            var SectionId = $("#SectionId").val();
+
+            //if no data add else edit
+            if (SectionId == 0) {
+
+                $.ajax({
+                    type: 'POST',
+                    url: 'http://localhost:60487/Admin/section/FormSubmit',
+                    //First Name is the parameters From the controller must be the same name
+                    data: { Name: Name, class_id: class_id },
+                    //Success is after post what we want to Show ?
+                    success: function () {
+                        GetSection();
+                        $('#SectionModal').modal('hide');
+
+                        $("#Name").val('')
+                        $("#SectionId").val(0)
+                    }
+                });
+
+
+
+            }
+            else {
+                $.ajax({
+                    type: 'POST',
+                    url: 'http://localhost:60487/Admin/section/Edit',
+                    data: { Name: Name, section_id: SectionId, class_id: class_id },
+                    success: function () {
+                        GetSection();
+                        $('#SectionModal').modal('hide');
+                        $("#Name").val('')
+                        $("#SectionId").val(0)
+
+                    }
+                });
+
+            }
+
+
+        });
+
+
+
+        $('body').on("click", ".btn-delete", function () {
+            var id = $(this).data('id');
+            var result = swal({
+                title: "Are you sure?",
+                text: "Once deleted, you will not be able to recover this Section Data",
+                icon: "warning",
+                buttons: true,
+                dangerMode: true,
+            })
+                .then((willDelete) => {
+                    if (willDelete) {
+                        $.ajax({
+
+                            url: "http://localhost:60487/Admin/section/Delete?id=" + id,
+
+                            success: function () {
+                                GetSection();
+                            }
+                        })
+                        swal("Your Section is now Deleted!", {
+                            icon: "success",
+                        });
+                    } else {
+                        swal("Your Session List is Saved");
+                    }
+                });
+            if (result) {
+               
+            }
+        })
+
+        $('body').on("click", '.btn-edit', function () {
+
+            $('#SectionModal .modal-title').text('Edit new Section');
+            $('#SectionModal').modal();
+            var section_id = $(this).data('id');
+            $.ajax({
+
+                url: 'http://localhost:60487/Admin/section/GetSection?section_id=' + section_id,
+
+                success: function (data) {
+
+                    //After Edit Fill te data
+                    $("#Name").val(data.Name)
+                    $("#SectionId").val(data.SectionId)
+
+                }
+            });
+        })
+
+
+    }
+</script>
+
+@* For Valdition Prefer it to be in bundle  *@
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+<script src="~/Content/admin/js/default.js"></script>
+
+
+       

@@ -1,0 +1,120 @@
+﻿@model IEnumerable<SMS.Models.StudySchedule>
+
+@{
+    ViewBag.Title = "Show";
+}
+
+<h2 id="heads">StudySchedule</h2>
+<div  style="margin-left:15%; margin-bottom:1%;" class="btn btn-info">@Html.ActionLink("Add", "Index")</div>
+
+<table id="studytable" class="table">
+    <!--Table head-->
+
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>FirstClass</th>
+            <th>SecondClass</th>
+            <th>ThierdClass</th>
+            <th>ForthClass</th>
+            <th>FifthClass</th>
+            <th>SixthClass</th>
+            <th>SeventhClass</th>
+
+        </tr>
+    </thead>
+    <!--Table head-->
+    <!--Table body-->
+    <tbody>
+        <tr>
+            <th scope="row">Sunday</th>
+
+            @foreach (var item in Model)
+            {
+                if (item.Day.Day1.Equals("Sunday"))
+                {
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Cours.CoursesTitle)
+
+                    </td>
+
+                }
+            }
+        </tr>
+        <tr>
+            <th scope="row">Monday</th>
+            @foreach (var item in Model)
+            {
+                if (item.Day.Day1.Equals("Monday"))
+                {
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Cours.CoursesTitle)
+                    </td>
+
+                }
+            }
+        </tr>
+        <tr>
+            <th scope="row">Tuesday</th>
+            @foreach (var item in Model)
+            {
+                if (item.Day.Day1.Equals("Tuesday"))
+                {
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Cours.CoursesTitle)
+                    </td>
+
+                }
+            }
+        </tr>
+        
+        <tr>
+            <th scope="row">Wednesday</th>
+
+            @foreach (var item in Model)
+            {
+                if (item.Day.Day1.Equals("Wednesday"))
+                {
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Cours.CoursesTitle)
+                    </td>
+
+                }
+            }
+        </tr>
+        <tr>
+            <th scope="row">Thursday</th>
+            @foreach (var item in Model)
+            {
+                if (item.Day.Day1.Equals("Thursday"))
+                {
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Cours.CoursesTitle)
+                    </td>
+
+                }
+            }
+        </tr>
+
+    </tbody>
+</table>
+
+<style>
+    #studytable{
+        width:70%;
+        margin-left:15%;
+        margin-right:15%;
+    }
+    #add{
+        width:50px;
+        height:25px;
+        border:1px solid red;
+        margin-left:15%;
+
+    }
+</style>

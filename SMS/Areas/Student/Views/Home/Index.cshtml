@@ -1,0 +1,13 @@
+﻿@model IEnumerable<SMS.Models.Student>
+
+@{
+    ViewBag.Title = "Index";
+}
+<body>
+    <h2 id="heads" style="margin-bottom:2%;">Home</h2>
+    <br />
+    <p id="heads" style="font-size:20px">Welcome  @Session["stfullname"].ToString()</p>
+   
+    <center>  <a style="height:44px" class="btn btn-info" href="http://localhost:60487/Student/ShowAttendance/Index">View Your Attendance</a> &nbsp &nbsp &nbsp &nbsp <a style="height:44px" class="btn btn-info" href="http://localhost:60487/Student/StudySc/Index">View Study Schedule</a></center>
+
+</body>

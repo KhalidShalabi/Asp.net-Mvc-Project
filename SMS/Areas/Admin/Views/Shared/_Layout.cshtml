@@ -1,0 +1,214 @@
+﻿
+@{
+    Layout = null;
+
+}
+
+<!DOCTYPE html>
+@if (Session["role"] != "Admin")
+{
+    <script>
+        window.location.href = "/Admin/Account/logout";
+
+    </script>
+}
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>SMS</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="~/Content/bower_components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/Content/bower_components/Ionicons/css/ionicons.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="~/Content/admin/css/default4.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div class="container-fluid display-table">
+        <div class="row display-table-row">
+            <!-- side menu -->
+            <div class="col-md-2 col-sm-1 hidden-xs display-table-cell valign-top" id="side-menu">
+                <img class="hidden-sm hidden-xs" src="~/Content/admin/img/logo2.png">
+                <h1 class="hidden-sm hidden-xs">Navigation</h1>
+                <ul>
+                    <li class="link">
+                        <a href="http://localhost:60487/Admin/Home/Index">
+                            <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+                            <span class="hidden-sm hidden-xs">Home</span>
+                        </a>
+                    </li>
+                    <li class="link">
+                        <a href="#collapse-first" data-toggle="collapse" area-controls="collapse-first" onclick="iconchange1()">
+                            <i id="icons1" class="glyphicon glyphicon-chevron-right"></i>
+                            <i id="icons2" class="glyphicon glyphicon-chevron-down" style="display:none"></i>
+                            <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                            <span class="hidden-sm hidden-xs">Students</span>
+                        </a>
+                        <ul class="collapse collapseable" id="collapse-first">
+                            <li><a href="http://localhost:60487/Admin/Students/AddOrEdit">Add Student</a></li>
+                            <li><a href="http://localhost:60487/Admin/Students/Index">Student List</a></li>
+                        </ul>
+                    </li>
+                    <li class="link">
+                        <a href="#collapse-second" data-toggle="collapse" area-controls="collapse-second" onclick="iconchange2()">
+                            <i id="icons3" class="glyphicon glyphicon-chevron-right"></i>
+                            <i id="icons4" class="glyphicon glyphicon-chevron-down" style="display:none"></i>
+                            <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                            <span class="hidden-sm hidden-xs">Teachers</span>
+
+                        </a>
+                        <ul class="collapse collapseable" id="collapse-second">
+
+                            <li><a href="http://localhost:60487/Admin/Teachers/Index">Add Teacher</a></li>
+                            <li><a href="http://localhost:60487/Admin/AssignTeacher/index">Assign Teacher</a></li>
+                            <li><a href="http://localhost:60487/Admin/TeacherAttendance/index">TeachersAttendance</a></li>
+                        </ul>
+                    </li>
+                    <li class="link">
+                        <a href="#collapse-third" data-toggle="collapse" area-controls="collapse-third" onclick="iconchange3()">
+                            <i id="icons5" class="glyphicon glyphicon-chevron-right"></i>
+                            <i id="icons6" class="glyphicon glyphicon-chevron-down" style="display:none"></i>
+                            <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+                            <span class="hidden-sm hidden-xs">Classes</span>
+
+                        </a>
+                        <ul class="collapse collapseable" id="collapse-third">
+                            <li><a href="http://localhost:60487/Admin/Class/Index">Class List</a></li>
+                            <li><a href="http://localhost:60487/Admin/ClassMaterials/ViewClassM">Classes Materials</a></li>
+                        </ul>
+                    </li>
+                    <li class="link">
+                        <a href="http://localhost:60487/Admin/StudySc/Index">
+                            <span class="glyphicon glyphicon-scale" aria-hidden="true"></span>
+                            <span class="hidden-sm hidden-xs">Study Schedules</span>
+                        </a>
+                    </li>
+                    <li class="link">
+                        <a href="http://localhost:60487/Admin/Event/Index">
+                            <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+                            <span class="hidden-sm hidden-xs">Calendar</span>
+                        </a>
+                    </li>
+
+
+
+
+
+
+                    <!-- end of collapse list area -->
+
+
+                    <li class="link setting-btn">
+                        <a href="settings.html">
+                            <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+                            <span class="hidden-sm hidden-xs">Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- main area -->
+            <div class="col-md-10 col-sm-11 display-table-cell valign-top box">
+                <div id="maincontent">
+                    <div class="row">
+                        <header id="nav-header" class="clearfix">
+                            <div class="col-md-5">
+                                <i id="tog" class="ion ion-navicon-round pull-left" onclick="toggleSlidebar()"></i>
+                                <i id="tog2" class="ion ion-navicon-round pull-left" onclick="toggleSlidebar2()" style="display:none"></i>
+                                <!--<div class="navbar-default pull-left">
+                                    <button type="button" class="navbar-toggle collapsed" data-toggle="offcanvas" data-target="#side-menu" aria-expanded="false">
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+
+                                </div> -->
+                                <!-- <input type="text" class="hidden-sm hidden-xs" id="header-search-field" placeholder="Search for something .." /> -->
+                            </div>
+                            <div class="col-md-7">
+
+                                <ul class="pull-right">
+                                    <!-- move it to right-->
+
+                                    <li class="hidden-sm hidden-xs" id="welcome ">Welcome  @Session["role"]</li>
+
+
+                                    <li class="fixed-width">
+                                        <a href="#" class="bell">
+                                            <span class="glyphicon glyphicon-bell" aria-hidden="true"></span>
+                                            <span class="label lable-message">3</span>
+                                        </a>
+                                    </li>
+                                    <li class="fixed-width">
+                                        <a href="#" class="envelope">
+                                            <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+                                            <span class="label lable-message">3</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="http://localhost:60487/admin/account/logout" class="logout">
+                                            <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
+                                            logout
+                                        </a>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </header>
+                    </div>
+                    <!-- start of  main contact everything gose here formes/tables/etc -->
+                    <div id="content">
+
+
+
+                        @RenderBody()
+                        <div class="content-inner">
+                            <div class="row">
+                                <div class="col-md-6">
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- end of  main contact everything gose here formes/tables/etc -->
+                        <div class="row">
+                            <footer id="footer" class="clearfix">
+                                <div class="pull-left"><b>Copyright</b>&copy; 2018</div>
+                                <div class="pull-right">Made by osama and Khalid</div>
+                            </footer>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="~/Content/vendor/bootstrap-3.3.2-dist/js/bootstrap.min.js"></script>
+    <script src="~/Content/admin/js/default.js"></script>
+    <script>
+        TargetJs();
+    </script>
+    @RenderSection("Scripts", false)
+    <script src="~/Scripts/validator.min.js"></script>
+
+
+
+</body>
+</html>
+

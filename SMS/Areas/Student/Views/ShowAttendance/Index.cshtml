@@ -1,0 +1,28 @@
+﻿@model IEnumerable<SMS.Models.StudentAttindence>
+@{
+    ViewBag.Title = "Index";
+
+}
+
+<h2 id="heads">Your  Attendance</h2>
+<div style="font-size:20px; margin-left:20%">Total absent days are @Model.Count()</div>
+<table  style="width:60%; margin-left:20%; margin-right:20%;" id="MyTable" class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Date</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>@item.Student.FullName</td>
+            <td>@item.Date</td>
+            
+
+        </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,142 @@
+﻿@model SMS.Models.Teacher
+
+@{
+    ViewBag.Title = "Delete";
+}
+<div class="style" ?>
+    <h2 id="heads">Delete Teacher</h2>
+
+    <h3>Are you sure you want to delete this?</h3>
+    <div>
+
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.ThFirstName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ThFirstName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.ThAddress)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ThAddress)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.ThHireDate)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ThHireDate)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.ThDegree)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ThDegree)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.ThExperience)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ThExperience)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.ThSecondName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ThSecondName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.ThLastName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ThLastName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Email)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Email)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Gender)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Gender)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.BirthDate)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.BirthDate)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Image)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Image)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Password)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Password)
+            </dd>
+
+        </dl>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete"  class="btn btn-info" /> |
+                @Html.ActionLink("Back to List", "Index")
+            </div>
+        }
+    </div>
+</div>
+<script>
+    function sweetdel() {
+
+        swal({
+            title: "Are you sure?",
+            text: "Once deleted, you will not be able to recover this Class Data",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+        })
+            .then((willDelete) => {
+                if (willDelete) {
+                    swal("Your Class is now Deleted!", {
+                        icon: "success",
+                    });
+                } else {
+                    swal("Your Class List is Saved");
+                }
+            });
+</script>

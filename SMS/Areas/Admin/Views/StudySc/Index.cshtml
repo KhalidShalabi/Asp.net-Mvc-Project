@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<h2 id="heads">Add Course </h2>
+<div style="width:90%; margin-left:5%; margin-right:5%;">
+    @using (Html.BeginForm("Save", "StudySc", FormMethod.Post))
+    {
+        <label>Courses</label>
+        @Html.DropDownList("CourseList", null, "Choose Course", new { @class = "form-control" })
+        <br />
+        <label>Day</label>
+        @Html.DropDownList("DayList", null, "Choose Day", new { @class = "form-control" })
+        <br />
+        <label>Teacher</label>
+        @Html.DropDownList("TeacherList", null, "Choose Teacher", new { @class = "form-control" })
+        <br />
+        <label>Section</label>
+        @Html.DropDownList("SectionList", null, "Choose section", new { @class = "form-control" })
+        <br />
+        <Center><input type="submit" name="Add" class="btn btn-primary" onclick="sweet33()" /> &nbsp; &nbsp; &nbsp;<a href="http://localhost:60487/Admin/StudySc/Show" class="btn btn-primary">View Table</a></Center>
+    }
+
+</div>
+<script>
+    function sweet33() {
+
+            swal({
+                position: 'center',
+                type: 'success',
+                title: 'Your course has been added',
+                icon: 'success',
+                showConfirmButton: false,
+                timer: 2000
+            })
+        };
+    
+</script>

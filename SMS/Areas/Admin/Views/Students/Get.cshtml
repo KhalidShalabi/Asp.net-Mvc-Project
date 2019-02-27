@@ -1,0 +1,65 @@
+﻿@model IEnumerable<SMS.Models.Student>
+@{
+    ViewBag.Title = "Index";
+    Layout = null;
+}
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+<h2 id="heads">Students List</h2>
+
+<div class="container">
+    <div class="form-group">
+        <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+            <input type="text" id="Search" placeholder="Search" class="form-control" />
+        </div>
+    </div>
+</div>
+<table class="table" id="MyTable">
+
+
+
+
+    <tr>
+        <th>Name</th>
+        <th>Address</th>
+        <th>PhoneNumber</th>
+        <th>Email</th>
+        <th>Password</th>
+        <th>Gender</th>
+        <th>NationalNumber</th>
+        <th>Actions</th>
+    </tr>
+
+
+
+    @foreach (var item in Model)
+    {
+        <tr class="Search">
+            <td>@item.StFirstName @item.StSecondName @item.StLastName</td>
+            <td>@item.StAddress</td>
+            <td>@item.PhoneNumber</td>
+            <td>@item.Email</td>
+            <td>@item.StPassword</td>
+            @if (item.Gender == true)
+            {
+                <td>Female</td>
+
+            }
+            else
+            {
+                <td>Male</td>
+            }
+            <td>@item.National_Number</td>
+            <td>
+
+                <button class="btn btn-info "><i class="glyphicon glyphicon-ruble"></i><a href="http://localhost:60487/Admin/students/AddOrEdit?student_id=@item.StudentId&class_id=@Request.Params["class_id"]&section_id=@Request.Params["section_id"]">Edit</a></button>
+                <button class="btn btn-danger btn-delete" data-id="@item.StudentId"><i class="glyphicon glyphicon-trash"></i></button>
+
+            </td>
+        </tr>
+    }
+</table>
+
+<script src="~/Content/admin/js/default.js"></script>
+<script src="~/Content/plugins/jQuery/jquery-2.2.3.min.js"></script>

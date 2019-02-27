@@ -1,0 +1,1841 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="masterModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="__MigrationHistory">
+          <Key>
+            <PropertyRef Name="MigrationId" />
+            <PropertyRef Name="ContextKey" />
+          </Key>
+          <Property Name="MigrationId" Type="nvarchar" MaxLength="150" Nullable="false" />
+          <Property Name="ContextKey" Type="nvarchar" MaxLength="300" Nullable="false" />
+          <Property Name="Model" Type="varbinary(max)" Nullable="false" />
+          <Property Name="ProductVersion" Type="nvarchar" MaxLength="32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AssigmentGrades">
+          <Key>
+            <PropertyRef Name="AssigmentGradeId" />
+          </Key>
+          <Property Name="AssigmentGradeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="StudentName" Type="nvarchar(max)" />
+          <Property Name="AssigmentName" Type="nvarchar(max)" />
+          <Property Name="Grade" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Assigments">
+          <Key>
+            <PropertyRef Name="AssigmentId" />
+          </Key>
+          <Property Name="AssigmentId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AssigName" Type="nvarchar(max)" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="LastDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Classes">
+          <Key>
+            <PropertyRef Name="ClassId" />
+          </Key>
+          <Property Name="ClassId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ClassName" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="ClassMaterials">
+          <Key>
+            <PropertyRef Name="ClassMaterialsId" />
+          </Key>
+          <Property Name="ClassMaterialsId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Courses">
+          <Key>
+            <PropertyRef Name="CoursesId" />
+          </Key>
+          <Property Name="CoursesId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CoursesTitle" Type="nvarchar(max)" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="ClassId" Type="int" Nullable="false" />
+          <Property Name="ClassMaterialsId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DayDates">
+          <Key>
+            <PropertyRef Name="DayId" />
+          </Key>
+          <Property Name="DayId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Date" Type="datetime" Nullable="false" />
+          <Property Name="TeacherId" Type="int" />
+        </EntityType>
+        <EntityType Name="Days">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Day" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Events">
+          <Key>
+            <PropertyRef Name="EventID" />
+          </Key>
+          <Property Name="EventID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Subject" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="300" />
+          <Property Name="Start" Type="datetime" />
+          <Property Name="End" Type="datetime" />
+          <Property Name="ThemeColor" Type="nvarchar" MaxLength="10" />
+          <Property Name="IsFullDay" Type="bit" />
+        </EntityType>
+        <EntityType Name="Hostels">
+          <Key>
+            <PropertyRef Name="HostleId" />
+          </Key>
+          <Property Name="HostleId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="HostelType" Type="nvarchar(max)" />
+          <Property Name="Address" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Libraries">
+          <Key>
+            <PropertyRef Name="LibraryId" />
+          </Key>
+          <Property Name="LibraryId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BookTitle" Type="nvarchar(max)" />
+          <Property Name="BookAuthor" Type="nvarchar(max)" />
+          <Property Name="BookPrice" Type="float" Nullable="false" />
+          <Property Name="BookDescription" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Managers">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Email" Type="nvarchar(max)" />
+          <Property Name="Password" Type="nvarchar(max)" />
+          <Property Name="Name" Type="nvarchar(max)" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'master.dbo.MSreplication_options' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="MSreplication_options">
+          <Key>
+            <PropertyRef Name="optname" />
+            <PropertyRef Name="value" />
+            <PropertyRef Name="major_version" />
+            <PropertyRef Name="minor_version" />
+            <PropertyRef Name="revision" />
+            <PropertyRef Name="install_failures" />
+          </Key>
+          <Property Name="optname" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="value" Type="bit" Nullable="false" />
+          <Property Name="major_version" Type="int" Nullable="false" />
+          <Property Name="minor_version" Type="int" Nullable="false" />
+          <Property Name="revision" Type="int" Nullable="false" />
+          <Property Name="install_failures" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Parents">
+          <Key>
+            <PropertyRef Name="ParentsId" />
+          </Key>
+          <Property Name="ParentsId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" />
+          <Property Name="Email" Type="nvarchar(max)" />
+          <Property Name="Password" Type="nvarchar(max)" />
+          <Property Name="Address" Type="nvarchar(max)" />
+          <Property Name="PhoneNumber" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Sections">
+          <Key>
+            <PropertyRef Name="SectionId" />
+          </Key>
+          <Property Name="SectionId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" />
+          <Property Name="ClassId" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'master.dbo.spt_fallback_db' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="spt_fallback_db">
+          <Key>
+            <PropertyRef Name="xserver_name" />
+            <PropertyRef Name="xdttm_ins" />
+            <PropertyRef Name="xdttm_last_ins_upd" />
+            <PropertyRef Name="name" />
+            <PropertyRef Name="dbid" />
+            <PropertyRef Name="status" />
+            <PropertyRef Name="version" />
+          </Key>
+          <Property Name="xserver_name" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="xdttm_ins" Type="datetime" Nullable="false" />
+          <Property Name="xdttm_last_ins_upd" Type="datetime" Nullable="false" />
+          <Property Name="xfallback_dbid" Type="smallint" />
+          <Property Name="name" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="dbid" Type="smallint" Nullable="false" />
+          <Property Name="status" Type="smallint" Nullable="false" />
+          <Property Name="version" Type="smallint" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'master.dbo.spt_fallback_dev' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="spt_fallback_dev">
+          <Key>
+            <PropertyRef Name="xserver_name" />
+            <PropertyRef Name="xdttm_ins" />
+            <PropertyRef Name="xdttm_last_ins_upd" />
+            <PropertyRef Name="low" />
+            <PropertyRef Name="high" />
+            <PropertyRef Name="status" />
+            <PropertyRef Name="name" />
+            <PropertyRef Name="phyname" />
+          </Key>
+          <Property Name="xserver_name" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="xdttm_ins" Type="datetime" Nullable="false" />
+          <Property Name="xdttm_last_ins_upd" Type="datetime" Nullable="false" />
+          <Property Name="xfallback_low" Type="int" />
+          <Property Name="xfallback_drive" Type="char" MaxLength="2" />
+          <Property Name="low" Type="int" Nullable="false" />
+          <Property Name="high" Type="int" Nullable="false" />
+          <Property Name="status" Type="smallint" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="phyname" Type="varchar" MaxLength="127" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'master.dbo.spt_fallback_usg' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="spt_fallback_usg">
+          <Key>
+            <PropertyRef Name="xserver_name" />
+            <PropertyRef Name="xdttm_ins" />
+            <PropertyRef Name="xdttm_last_ins_upd" />
+            <PropertyRef Name="dbid" />
+            <PropertyRef Name="segmap" />
+            <PropertyRef Name="lstart" />
+            <PropertyRef Name="sizepg" />
+            <PropertyRef Name="vstart" />
+          </Key>
+          <Property Name="xserver_name" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="xdttm_ins" Type="datetime" Nullable="false" />
+          <Property Name="xdttm_last_ins_upd" Type="datetime" Nullable="false" />
+          <Property Name="xfallback_vstart" Type="int" />
+          <Property Name="dbid" Type="smallint" Nullable="false" />
+          <Property Name="segmap" Type="int" Nullable="false" />
+          <Property Name="lstart" Type="int" Nullable="false" />
+          <Property Name="sizepg" Type="int" Nullable="false" />
+          <Property Name="vstart" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'master.dbo.spt_monitor' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="spt_monitor">
+          <Key>
+            <PropertyRef Name="lastrun" />
+            <PropertyRef Name="cpu_busy" />
+            <PropertyRef Name="io_busy" />
+            <PropertyRef Name="idle" />
+            <PropertyRef Name="pack_received" />
+            <PropertyRef Name="pack_sent" />
+            <PropertyRef Name="connections" />
+            <PropertyRef Name="pack_errors" />
+            <PropertyRef Name="total_read" />
+            <PropertyRef Name="total_write" />
+            <PropertyRef Name="total_errors" />
+          </Key>
+          <Property Name="lastrun" Type="datetime" Nullable="false" />
+          <Property Name="cpu_busy" Type="int" Nullable="false" />
+          <Property Name="io_busy" Type="int" Nullable="false" />
+          <Property Name="idle" Type="int" Nullable="false" />
+          <Property Name="pack_received" Type="int" Nullable="false" />
+          <Property Name="pack_sent" Type="int" Nullable="false" />
+          <Property Name="connections" Type="int" Nullable="false" />
+          <Property Name="pack_errors" Type="int" Nullable="false" />
+          <Property Name="total_read" Type="int" Nullable="false" />
+          <Property Name="total_write" Type="int" Nullable="false" />
+          <Property Name="total_errors" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="StudentAttindence">
+          <Key>
+            <PropertyRef Name="AttId" />
+          </Key>
+          <Property Name="AttId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Date" Type="datetime" />
+          <Property Name="StudentId" Type="int" />
+        </EntityType>
+        <EntityType Name="Students">
+          <Key>
+            <PropertyRef Name="StudentId" />
+          </Key>
+          <Property Name="StudentId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="StFirstName" Type="nvarchar(max)" />
+          <Property Name="StAddress" Type="nvarchar(max)" />
+          <Property Name="StDOB" Type="datetime" />
+          <Property Name="StAge" Type="int" />
+          <Property Name="StSecondName" Type="nvarchar(max)" />
+          <Property Name="StLastName" Type="nvarchar(max)" />
+          <Property Name="StPassword" Type="nvarchar" MaxLength="50" />
+          <Property Name="PhoneNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="Email" Type="nvarchar(max)" />
+          <Property Name="Image" Type="varbinary" MaxLength="50" />
+          <Property Name="Gender" Type="bit" />
+          <Property Name="SectionId" Type="int" Nullable="false" />
+          <Property Name="National_Number" Type="nvarchar" MaxLength="50" />
+          <Property Name="ImagePath" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="StudentsGrade">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="TeacherId" Type="int" Nullable="false" />
+          <Property Name="StudentId" Type="int" />
+          <Property Name="CourseId" Type="int" Nullable="false" />
+          <Property Name="ClassId" Type="int" Nullable="false" />
+          <Property Name="SectionId" Type="int" Nullable="false" />
+          <Property Name="FirstGrade" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="SecondGrade" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ThirdGrade" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="FinalGrade" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Avg" Type="float" Nullable="false" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="StudySchedule">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CourseId" Type="int" />
+          <Property Name="DayId" Type="int" />
+          <Property Name="TeacherId" Type="int" />
+          <Property Name="SectionId" Type="int" />
+        </EntityType>
+        <EntityType Name="TeacherCourses">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="CourseId" Type="int" Nullable="false" />
+          <Property Name="TeacherId" Type="int" Nullable="false" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Teachers">
+          <Key>
+            <PropertyRef Name="TeacherId" />
+          </Key>
+          <Property Name="TeacherId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ThFirstName" Type="nvarchar(max)" />
+          <Property Name="ThAddress" Type="nvarchar(max)" />
+          <Property Name="ThHireDate" Type="datetime" />
+          <Property Name="ThDegree" Type="nvarchar(max)" />
+          <Property Name="ThExperience" Type="nvarchar(max)" />
+          <Property Name="ThSecondName" Type="nvarchar(max)" />
+          <Property Name="ThLastName" Type="nvarchar(max)" />
+          <Property Name="Email" Type="nvarchar(max)" />
+          <Property Name="Gender" Type="bit" />
+          <Property Name="BirthDate" Type="datetime" />
+          <Property Name="Image" Type="nvarchar(max)" />
+          <Property Name="Password" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="TeacherSections">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="TeacherId" Type="int" Nullable="false" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SectinId" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_DayDates_Teachers">
+          <End Role="Teachers" Type="Self.Teachers" Multiplicity="0..1" />
+          <End Role="DayDates" Type="Self.DayDates" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Teachers">
+              <PropertyRef Name="TeacherId" />
+            </Principal>
+            <Dependent Role="DayDates">
+              <PropertyRef Name="TeacherId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_Courses_dbo_Classes_ClassId">
+          <End Role="Classes" Type="Self.Classes" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Courses" Type="Self.Courses" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Classes">
+              <PropertyRef Name="ClassId" />
+            </Principal>
+            <Dependent Role="Courses">
+              <PropertyRef Name="ClassId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_Courses_dbo_ClassMaterials_ClassMaterialsId">
+          <End Role="ClassMaterials" Type="Self.ClassMaterials" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Courses" Type="Self.Courses" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ClassMaterials">
+              <PropertyRef Name="ClassMaterialsId" />
+            </Principal>
+            <Dependent Role="Courses">
+              <PropertyRef Name="ClassMaterialsId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_Students_dbo_Sections_SectionId">
+          <End Role="Sections" Type="Self.Sections" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Students" Type="Self.Students" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Sections">
+              <PropertyRef Name="SectionId" />
+            </Principal>
+            <Dependent Role="Students">
+              <PropertyRef Name="SectionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_TeacherCourses_dbo_Teachers_TeacherId">
+          <End Role="Teachers" Type="Self.Teachers" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="TeacherCourses" Type="Self.TeacherCourses" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Teachers">
+              <PropertyRef Name="TeacherId" />
+            </Principal>
+            <Dependent Role="TeacherCourses">
+              <PropertyRef Name="TeacherId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_TeacherSections_dbo_Sections_SectinId">
+          <End Role="Sections" Type="Self.Sections" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="TeacherSections" Type="Self.TeacherSections" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Sections">
+              <PropertyRef Name="SectionId" />
+            </Principal>
+            <Dependent Role="TeacherSections">
+              <PropertyRef Name="SectinId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_TeacherSections_dbo_Teachers_TeacherId">
+          <End Role="Teachers" Type="Self.Teachers" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="TeacherSections" Type="Self.TeacherSections" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Teachers">
+              <PropertyRef Name="TeacherId" />
+            </Principal>
+            <Dependent Role="TeacherSections">
+              <PropertyRef Name="TeacherId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Sections_Classes">
+          <End Role="Classes" Type="Self.Classes" Multiplicity="0..1" />
+          <End Role="Sections" Type="Self.Sections" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Classes">
+              <PropertyRef Name="ClassId" />
+            </Principal>
+            <Dependent Role="Sections">
+              <PropertyRef Name="ClassId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_StudentAttindence_Students">
+          <End Role="Students" Type="Self.Students" Multiplicity="0..1" />
+          <End Role="StudentAttindence" Type="Self.StudentAttindence" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Students">
+              <PropertyRef Name="StudentId" />
+            </Principal>
+            <Dependent Role="StudentAttindence">
+              <PropertyRef Name="StudentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_StudentsGrade_Classes">
+          <End Role="Classes" Type="Self.Classes" Multiplicity="1" />
+          <End Role="StudentsGrade" Type="Self.StudentsGrade" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Classes">
+              <PropertyRef Name="ClassId" />
+            </Principal>
+            <Dependent Role="StudentsGrade">
+              <PropertyRef Name="ClassId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_StudentsGrade_Courses">
+          <End Role="Courses" Type="Self.Courses" Multiplicity="1" />
+          <End Role="StudentsGrade" Type="Self.StudentsGrade" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Courses">
+              <PropertyRef Name="CoursesId" />
+            </Principal>
+            <Dependent Role="StudentsGrade">
+              <PropertyRef Name="CourseId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_StudentsGrade_Sections">
+          <End Role="Sections" Type="Self.Sections" Multiplicity="1" />
+          <End Role="StudentsGrade" Type="Self.StudentsGrade" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Sections">
+              <PropertyRef Name="SectionId" />
+            </Principal>
+            <Dependent Role="StudentsGrade">
+              <PropertyRef Name="SectionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_StudentsGrade_Students">
+          <End Role="Students" Type="Self.Students" Multiplicity="0..1" />
+          <End Role="StudentsGrade" Type="Self.StudentsGrade" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Students">
+              <PropertyRef Name="StudentId" />
+            </Principal>
+            <Dependent Role="StudentsGrade">
+              <PropertyRef Name="StudentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_StudentsGrade_Students1">
+          <End Role="Students" Type="Self.Students" Multiplicity="0..1" />
+          <End Role="StudentsGrade" Type="Self.StudentsGrade" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Students">
+              <PropertyRef Name="StudentId" />
+            </Principal>
+            <Dependent Role="StudentsGrade">
+              <PropertyRef Name="StudentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_StudentsGrade_Teachers">
+          <End Role="Teachers" Type="Self.Teachers" Multiplicity="1" />
+          <End Role="StudentsGrade" Type="Self.StudentsGrade" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Teachers">
+              <PropertyRef Name="TeacherId" />
+            </Principal>
+            <Dependent Role="StudentsGrade">
+              <PropertyRef Name="TeacherId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_StudySchedule_Courses">
+          <End Role="Courses" Type="Self.Courses" Multiplicity="0..1" />
+          <End Role="StudySchedule" Type="Self.StudySchedule" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Courses">
+              <PropertyRef Name="CoursesId" />
+            </Principal>
+            <Dependent Role="StudySchedule">
+              <PropertyRef Name="CourseId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_StudySchedule_Days">
+          <End Role="Days" Type="Self.Days" Multiplicity="0..1" />
+          <End Role="StudySchedule" Type="Self.StudySchedule" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Days">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="StudySchedule">
+              <PropertyRef Name="DayId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_StudySchedule_Sections">
+          <End Role="Sections" Type="Self.Sections" Multiplicity="0..1" />
+          <End Role="StudySchedule" Type="Self.StudySchedule" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Sections">
+              <PropertyRef Name="SectionId" />
+            </Principal>
+            <Dependent Role="StudySchedule">
+              <PropertyRef Name="SectionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_StudySchedule_Teachers">
+          <End Role="Teachers" Type="Self.Teachers" Multiplicity="0..1" />
+          <End Role="StudySchedule" Type="Self.StudySchedule" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Teachers">
+              <PropertyRef Name="TeacherId" />
+            </Principal>
+            <Dependent Role="StudySchedule">
+              <PropertyRef Name="TeacherId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TeacherCourses_Courses">
+          <End Role="Courses" Type="Self.Courses" Multiplicity="1" />
+          <End Role="TeacherCourses" Type="Self.TeacherCourses" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Courses">
+              <PropertyRef Name="CoursesId" />
+            </Principal>
+            <Dependent Role="TeacherCourses">
+              <PropertyRef Name="CourseId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="sp_getTeacher" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="TeacherID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_MScleanupmergepublisher" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_MSrepl_startup" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <EntityContainer Name="masterModelStoreContainer">
+          <EntitySet Name="__MigrationHistory" EntityType="Self.__MigrationHistory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AssigmentGrades" EntityType="Self.AssigmentGrades" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Assigments" EntityType="Self.Assigments" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Classes" EntityType="Self.Classes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ClassMaterials" EntityType="Self.ClassMaterials" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Courses" EntityType="Self.Courses" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DayDates" EntityType="Self.DayDates" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Days" EntityType="Self.Days" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Events" EntityType="Self.Events" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Hostels" EntityType="Self.Hostels" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Libraries" EntityType="Self.Libraries" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Managers" EntityType="Self.Managers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Parents" EntityType="Self.Parents" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Sections" EntityType="Self.Sections" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="StudentAttindence" EntityType="Self.StudentAttindence" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Students" EntityType="Self.Students" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="StudentsGrade" EntityType="Self.StudentsGrade" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="StudySchedule" EntityType="Self.StudySchedule" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TeacherCourses" EntityType="Self.TeacherCourses" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Teachers" EntityType="Self.Teachers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TeacherSections" EntityType="Self.TeacherSections" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MSreplication_options" EntityType="Self.MSreplication_options" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [MSreplication_options].[optname] AS [optname], 
+    [MSreplication_options].[value] AS [value], 
+    [MSreplication_options].[major_version] AS [major_version], 
+    [MSreplication_options].[minor_version] AS [minor_version], 
+    [MSreplication_options].[revision] AS [revision], 
+    [MSreplication_options].[install_failures] AS [install_failures]
+    FROM [dbo].[MSreplication_options] AS [MSreplication_options]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="spt_fallback_db" EntityType="Self.spt_fallback_db" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [spt_fallback_db].[xserver_name] AS [xserver_name], 
+    [spt_fallback_db].[xdttm_ins] AS [xdttm_ins], 
+    [spt_fallback_db].[xdttm_last_ins_upd] AS [xdttm_last_ins_upd], 
+    [spt_fallback_db].[xfallback_dbid] AS [xfallback_dbid], 
+    [spt_fallback_db].[name] AS [name], 
+    [spt_fallback_db].[dbid] AS [dbid], 
+    [spt_fallback_db].[status] AS [status], 
+    [spt_fallback_db].[version] AS [version]
+    FROM [dbo].[spt_fallback_db] AS [spt_fallback_db]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="spt_fallback_dev" EntityType="Self.spt_fallback_dev" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [spt_fallback_dev].[xserver_name] AS [xserver_name], 
+    [spt_fallback_dev].[xdttm_ins] AS [xdttm_ins], 
+    [spt_fallback_dev].[xdttm_last_ins_upd] AS [xdttm_last_ins_upd], 
+    [spt_fallback_dev].[xfallback_low] AS [xfallback_low], 
+    [spt_fallback_dev].[xfallback_drive] AS [xfallback_drive], 
+    [spt_fallback_dev].[low] AS [low], 
+    [spt_fallback_dev].[high] AS [high], 
+    [spt_fallback_dev].[status] AS [status], 
+    [spt_fallback_dev].[name] AS [name], 
+    [spt_fallback_dev].[phyname] AS [phyname]
+    FROM [dbo].[spt_fallback_dev] AS [spt_fallback_dev]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="spt_fallback_usg" EntityType="Self.spt_fallback_usg" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [spt_fallback_usg].[xserver_name] AS [xserver_name], 
+    [spt_fallback_usg].[xdttm_ins] AS [xdttm_ins], 
+    [spt_fallback_usg].[xdttm_last_ins_upd] AS [xdttm_last_ins_upd], 
+    [spt_fallback_usg].[xfallback_vstart] AS [xfallback_vstart], 
+    [spt_fallback_usg].[dbid] AS [dbid], 
+    [spt_fallback_usg].[segmap] AS [segmap], 
+    [spt_fallback_usg].[lstart] AS [lstart], 
+    [spt_fallback_usg].[sizepg] AS [sizepg], 
+    [spt_fallback_usg].[vstart] AS [vstart]
+    FROM [dbo].[spt_fallback_usg] AS [spt_fallback_usg]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="spt_monitor" EntityType="Self.spt_monitor" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [spt_monitor].[lastrun] AS [lastrun], 
+    [spt_monitor].[cpu_busy] AS [cpu_busy], 
+    [spt_monitor].[io_busy] AS [io_busy], 
+    [spt_monitor].[idle] AS [idle], 
+    [spt_monitor].[pack_received] AS [pack_received], 
+    [spt_monitor].[pack_sent] AS [pack_sent], 
+    [spt_monitor].[connections] AS [connections], 
+    [spt_monitor].[pack_errors] AS [pack_errors], 
+    [spt_monitor].[total_read] AS [total_read], 
+    [spt_monitor].[total_write] AS [total_write], 
+    [spt_monitor].[total_errors] AS [total_errors]
+    FROM [dbo].[spt_monitor] AS [spt_monitor]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_DayDates_Teachers" Association="Self.FK_DayDates_Teachers">
+            <End Role="Teachers" EntitySet="Teachers" />
+            <End Role="DayDates" EntitySet="DayDates" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_Courses_dbo_Classes_ClassId" Association="Self.FK_dbo_Courses_dbo_Classes_ClassId">
+            <End Role="Classes" EntitySet="Classes" />
+            <End Role="Courses" EntitySet="Courses" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_Courses_dbo_ClassMaterials_ClassMaterialsId" Association="Self.FK_dbo_Courses_dbo_ClassMaterials_ClassMaterialsId">
+            <End Role="ClassMaterials" EntitySet="ClassMaterials" />
+            <End Role="Courses" EntitySet="Courses" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_Students_dbo_Sections_SectionId" Association="Self.FK_dbo_Students_dbo_Sections_SectionId">
+            <End Role="Sections" EntitySet="Sections" />
+            <End Role="Students" EntitySet="Students" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_TeacherCourses_dbo_Teachers_TeacherId" Association="Self.FK_dbo_TeacherCourses_dbo_Teachers_TeacherId">
+            <End Role="Teachers" EntitySet="Teachers" />
+            <End Role="TeacherCourses" EntitySet="TeacherCourses" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_TeacherSections_dbo_Sections_SectinId" Association="Self.FK_dbo_TeacherSections_dbo_Sections_SectinId">
+            <End Role="Sections" EntitySet="Sections" />
+            <End Role="TeacherSections" EntitySet="TeacherSections" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_TeacherSections_dbo_Teachers_TeacherId" Association="Self.FK_dbo_TeacherSections_dbo_Teachers_TeacherId">
+            <End Role="Teachers" EntitySet="Teachers" />
+            <End Role="TeacherSections" EntitySet="TeacherSections" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Sections_Classes" Association="Self.FK_Sections_Classes">
+            <End Role="Classes" EntitySet="Classes" />
+            <End Role="Sections" EntitySet="Sections" />
+          </AssociationSet>
+          <AssociationSet Name="FK_StudentAttindence_Students" Association="Self.FK_StudentAttindence_Students">
+            <End Role="Students" EntitySet="Students" />
+            <End Role="StudentAttindence" EntitySet="StudentAttindence" />
+          </AssociationSet>
+          <AssociationSet Name="FK_StudentsGrade_Classes" Association="Self.FK_StudentsGrade_Classes">
+            <End Role="Classes" EntitySet="Classes" />
+            <End Role="StudentsGrade" EntitySet="StudentsGrade" />
+          </AssociationSet>
+          <AssociationSet Name="FK_StudentsGrade_Courses" Association="Self.FK_StudentsGrade_Courses">
+            <End Role="Courses" EntitySet="Courses" />
+            <End Role="StudentsGrade" EntitySet="StudentsGrade" />
+          </AssociationSet>
+          <AssociationSet Name="FK_StudentsGrade_Sections" Association="Self.FK_StudentsGrade_Sections">
+            <End Role="Sections" EntitySet="Sections" />
+            <End Role="StudentsGrade" EntitySet="StudentsGrade" />
+          </AssociationSet>
+          <AssociationSet Name="FK_StudentsGrade_Students" Association="Self.FK_StudentsGrade_Students">
+            <End Role="Students" EntitySet="Students" />
+            <End Role="StudentsGrade" EntitySet="StudentsGrade" />
+          </AssociationSet>
+          <AssociationSet Name="FK_StudentsGrade_Students1" Association="Self.FK_StudentsGrade_Students1">
+            <End Role="Students" EntitySet="Students" />
+            <End Role="StudentsGrade" EntitySet="StudentsGrade" />
+          </AssociationSet>
+          <AssociationSet Name="FK_StudentsGrade_Teachers" Association="Self.FK_StudentsGrade_Teachers">
+            <End Role="Teachers" EntitySet="Teachers" />
+            <End Role="StudentsGrade" EntitySet="StudentsGrade" />
+          </AssociationSet>
+          <AssociationSet Name="FK_StudySchedule_Courses" Association="Self.FK_StudySchedule_Courses">
+            <End Role="Courses" EntitySet="Courses" />
+            <End Role="StudySchedule" EntitySet="StudySchedule" />
+          </AssociationSet>
+          <AssociationSet Name="FK_StudySchedule_Days" Association="Self.FK_StudySchedule_Days">
+            <End Role="Days" EntitySet="Days" />
+            <End Role="StudySchedule" EntitySet="StudySchedule" />
+          </AssociationSet>
+          <AssociationSet Name="FK_StudySchedule_Sections" Association="Self.FK_StudySchedule_Sections">
+            <End Role="Sections" EntitySet="Sections" />
+            <End Role="StudySchedule" EntitySet="StudySchedule" />
+          </AssociationSet>
+          <AssociationSet Name="FK_StudySchedule_Teachers" Association="Self.FK_StudySchedule_Teachers">
+            <End Role="Teachers" EntitySet="Teachers" />
+            <End Role="StudySchedule" EntitySet="StudySchedule" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TeacherCourses_Courses" Association="Self.FK_TeacherCourses_Courses">
+            <End Role="Courses" EntitySet="Courses" />
+            <End Role="TeacherCourses" EntitySet="TeacherCourses" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="masterModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="C__MigrationHistory">
+          <Key>
+            <PropertyRef Name="MigrationId" />
+            <PropertyRef Name="ContextKey" />
+          </Key>
+          <Property Name="MigrationId" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ContextKey" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Model" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+          <Property Name="ProductVersion" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AssigmentGrade">
+          <Key>
+            <PropertyRef Name="AssigmentGradeId" />
+          </Key>
+          <Property Name="AssigmentGradeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="StudentName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AssigmentName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Grade" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Assigment">
+          <Key>
+            <PropertyRef Name="AssigmentId" />
+          </Key>
+          <Property Name="AssigmentId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AssigName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LastDate" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="Class">
+          <Key>
+            <PropertyRef Name="ClassId" />
+          </Key>
+          <Property Name="ClassId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ClassName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Courses" Relationship="Self.FK_dbo_Courses_dbo_Classes_ClassId" FromRole="Classes" ToRole="Courses" />
+          <NavigationProperty Name="Sections" Relationship="Self.FK_Sections_Classes" FromRole="Classes" ToRole="Sections" />
+          <NavigationProperty Name="StudentsGrades" Relationship="Self.FK_StudentsGrade_Classes" FromRole="Classes" ToRole="StudentsGrade" />
+        </EntityType>
+        <EntityType Name="ClassMaterial">
+          <Key>
+            <PropertyRef Name="ClassMaterialsId" />
+          </Key>
+          <Property Name="ClassMaterialsId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Courses" Relationship="Self.FK_dbo_Courses_dbo_ClassMaterials_ClassMaterialsId" FromRole="ClassMaterials" ToRole="Courses" />
+        </EntityType>
+        <EntityType Name="Cours">
+          <Key>
+            <PropertyRef Name="CoursesId" />
+          </Key>
+          <Property Name="CoursesId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CoursesTitle" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ClassId" Type="Int32" Nullable="false" />
+          <Property Name="ClassMaterialsId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Class" Relationship="Self.FK_dbo_Courses_dbo_Classes_ClassId" FromRole="Courses" ToRole="Classes" />
+          <NavigationProperty Name="ClassMaterial" Relationship="Self.FK_dbo_Courses_dbo_ClassMaterials_ClassMaterialsId" FromRole="Courses" ToRole="ClassMaterials" />
+          <NavigationProperty Name="StudentsGrades" Relationship="Self.FK_StudentsGrade_Courses" FromRole="Courses" ToRole="StudentsGrade" />
+          <NavigationProperty Name="StudySchedules" Relationship="Self.FK_StudySchedule_Courses" FromRole="Courses" ToRole="StudySchedule" />
+          <NavigationProperty Name="TeacherCourses" Relationship="Self.FK_TeacherCourses_Courses" FromRole="Courses" ToRole="TeacherCourses" />
+        </EntityType>
+        <EntityType Name="DayDate">
+          <Key>
+            <PropertyRef Name="DayId" />
+          </Key>
+          <Property Name="DayId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="TeacherId" Type="Int32" />
+          <NavigationProperty Name="Teacher" Relationship="Self.FK_DayDates_Teachers" FromRole="DayDates" ToRole="Teachers" />
+        </EntityType>
+        <EntityType Name="Day">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Day1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="StudySchedules" Relationship="Self.FK_StudySchedule_Days" FromRole="Days" ToRole="StudySchedule" />
+        </EntityType>
+        <EntityType Name="Hostel">
+          <Key>
+            <PropertyRef Name="HostleId" />
+          </Key>
+          <Property Name="HostleId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="HostelType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Library">
+          <Key>
+            <PropertyRef Name="LibraryId" />
+          </Key>
+          <Property Name="LibraryId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BookTitle" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="BookAuthor" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="BookPrice" Type="Double" Nullable="false" />
+          <Property Name="BookDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Manager">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Parent">
+          <Key>
+            <PropertyRef Name="ParentsId" />
+          </Key>
+          <Property Name="ParentsId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNumber" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Section">
+          <Key>
+            <PropertyRef Name="SectionId" />
+          </Key>
+          <Property Name="SectionId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ClassId" Type="Int32" />
+          <NavigationProperty Name="Class" Relationship="Self.FK_Sections_Classes" FromRole="Sections" ToRole="Classes" />
+          <NavigationProperty Name="Students" Relationship="Self.FK_dbo_Students_dbo_Sections_SectionId" FromRole="Sections" ToRole="Students" />
+          <NavigationProperty Name="TeacherSections" Relationship="Self.FK_dbo_TeacherSections_dbo_Sections_SectinId" FromRole="Sections" ToRole="TeacherSections" />
+          <NavigationProperty Name="StudentsGrades" Relationship="Self.FK_StudentsGrade_Sections" FromRole="Sections" ToRole="StudentsGrade" />
+          <NavigationProperty Name="StudySchedules" Relationship="Self.FK_StudySchedule_Sections" FromRole="Sections" ToRole="StudySchedule" />
+        </EntityType>
+        <EntityType Name="StudentAttindence">
+          <Key>
+            <PropertyRef Name="AttId" />
+          </Key>
+          <Property Name="AttId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Date" Type="DateTime" Precision="3" />
+          <Property Name="StudentId" Type="Int32" />
+          <NavigationProperty Name="Student" Relationship="Self.FK_StudentAttindence_Students" FromRole="StudentAttindence" ToRole="Students" />
+        </EntityType>
+        <EntityType Name="Student">
+          <Key>
+            <PropertyRef Name="StudentId" />
+          </Key>
+          <Property Name="StudentId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="StFirstName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="StAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="StDOB" Type="DateTime" Precision="3" />
+          <Property Name="StAge" Type="Int32" />
+          <Property Name="StSecondName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="StLastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="StPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Image" Type="Binary" MaxLength="50" FixedLength="false" />
+          <Property Name="Gender" Type="Boolean" />
+          <Property Name="SectionId" Type="Int32" Nullable="false" />
+          <Property Name="National_Number" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ImagePath" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Section" Relationship="Self.FK_dbo_Students_dbo_Sections_SectionId" FromRole="Students" ToRole="Sections" />
+          <NavigationProperty Name="StudentAttindences" Relationship="Self.FK_StudentAttindence_Students" FromRole="Students" ToRole="StudentAttindence" />
+          <NavigationProperty Name="StudentsGrades" Relationship="Self.FK_StudentsGrade_Students" FromRole="Students" ToRole="StudentsGrade" />
+          <NavigationProperty Name="StudentsGrades1" Relationship="Self.FK_StudentsGrade_Students1" FromRole="Students" ToRole="StudentsGrade" />
+        </EntityType>
+        <EntityType Name="StudentsGrade">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="TeacherId" Type="Int32" Nullable="false" />
+          <Property Name="StudentId" Type="Int32" />
+          <Property Name="CourseId" Type="Int32" Nullable="false" />
+          <Property Name="ClassId" Type="Int32" Nullable="false" />
+          <Property Name="SectionId" Type="Int32" Nullable="false" />
+          <Property Name="FirstGrade" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="SecondGrade" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ThirdGrade" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="FinalGrade" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Avg" Type="Double" Nullable="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Class" Relationship="Self.FK_StudentsGrade_Classes" FromRole="StudentsGrade" ToRole="Classes" />
+          <NavigationProperty Name="Cours" Relationship="Self.FK_StudentsGrade_Courses" FromRole="StudentsGrade" ToRole="Courses" />
+          <NavigationProperty Name="Section" Relationship="Self.FK_StudentsGrade_Sections" FromRole="StudentsGrade" ToRole="Sections" />
+          <NavigationProperty Name="Student" Relationship="Self.FK_StudentsGrade_Students" FromRole="StudentsGrade" ToRole="Students" />
+          <NavigationProperty Name="Student1" Relationship="Self.FK_StudentsGrade_Students1" FromRole="StudentsGrade" ToRole="Students" />
+          <NavigationProperty Name="Teacher" Relationship="Self.FK_StudentsGrade_Teachers" FromRole="StudentsGrade" ToRole="Teachers" />
+        </EntityType>
+        <EntityType Name="StudySchedule">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CourseId" Type="Int32" />
+          <Property Name="DayId" Type="Int32" />
+          <Property Name="TeacherId" Type="Int32" />
+          <Property Name="SectionId" Type="Int32" />
+          <NavigationProperty Name="Cours" Relationship="Self.FK_StudySchedule_Courses" FromRole="StudySchedule" ToRole="Courses" />
+          <NavigationProperty Name="Day" Relationship="Self.FK_StudySchedule_Days" FromRole="StudySchedule" ToRole="Days" />
+          <NavigationProperty Name="Section" Relationship="Self.FK_StudySchedule_Sections" FromRole="StudySchedule" ToRole="Sections" />
+          <NavigationProperty Name="Teacher" Relationship="Self.FK_StudySchedule_Teachers" FromRole="StudySchedule" ToRole="Teachers" />
+        </EntityType>
+        <EntityType Name="TeacherCours">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="CourseId" Type="Int32" Nullable="false" />
+          <Property Name="TeacherId" Type="Int32" Nullable="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Cours" Relationship="Self.FK_TeacherCourses_Courses" FromRole="TeacherCourses" ToRole="Courses" />
+          <NavigationProperty Name="Teacher" Relationship="Self.FK_dbo_TeacherCourses_dbo_Teachers_TeacherId" FromRole="TeacherCourses" ToRole="Teachers" />
+        </EntityType>
+        <EntityType Name="Teacher">
+          <Key>
+            <PropertyRef Name="TeacherId" />
+          </Key>
+          <Property Name="TeacherId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ThFirstName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ThAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ThHireDate" Type="DateTime" Precision="3" />
+          <Property Name="ThDegree" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ThExperience" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ThSecondName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ThLastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Gender" Type="Boolean" />
+          <Property Name="BirthDate" Type="DateTime" Precision="3" />
+          <Property Name="Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="DayDates" Relationship="Self.FK_DayDates_Teachers" FromRole="Teachers" ToRole="DayDates" />
+          <NavigationProperty Name="StudentsGrades" Relationship="Self.FK_StudentsGrade_Teachers" FromRole="Teachers" ToRole="StudentsGrade" />
+          <NavigationProperty Name="StudySchedules" Relationship="Self.FK_StudySchedule_Teachers" FromRole="Teachers" ToRole="StudySchedule" />
+          <NavigationProperty Name="TeacherCourses" Relationship="Self.FK_dbo_TeacherCourses_dbo_Teachers_TeacherId" FromRole="Teachers" ToRole="TeacherCourses" />
+          <NavigationProperty Name="TeacherSections" Relationship="Self.FK_dbo_TeacherSections_dbo_Teachers_TeacherId" FromRole="Teachers" ToRole="TeacherSections" />
+        </EntityType>
+        <EntityType Name="TeacherSection">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="TeacherId" Type="Int32" Nullable="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SectinId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Section" Relationship="Self.FK_dbo_TeacherSections_dbo_Sections_SectinId" FromRole="TeacherSections" ToRole="Sections" />
+          <NavigationProperty Name="Teacher" Relationship="Self.FK_dbo_TeacherSections_dbo_Teachers_TeacherId" FromRole="TeacherSections" ToRole="Teachers" />
+        </EntityType>
+        <EntityType Name="MSreplication_options">
+          <Key>
+            <PropertyRef Name="optname" />
+            <PropertyRef Name="value" />
+            <PropertyRef Name="major_version" />
+            <PropertyRef Name="minor_version" />
+            <PropertyRef Name="revision" />
+            <PropertyRef Name="install_failures" />
+          </Key>
+          <Property Name="optname" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="value" Type="Boolean" Nullable="false" />
+          <Property Name="major_version" Type="Int32" Nullable="false" />
+          <Property Name="minor_version" Type="Int32" Nullable="false" />
+          <Property Name="revision" Type="Int32" Nullable="false" />
+          <Property Name="install_failures" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="spt_fallback_db">
+          <Key>
+            <PropertyRef Name="xserver_name" />
+            <PropertyRef Name="xdttm_ins" />
+            <PropertyRef Name="xdttm_last_ins_upd" />
+            <PropertyRef Name="name" />
+            <PropertyRef Name="dbid" />
+            <PropertyRef Name="status" />
+            <PropertyRef Name="version" />
+          </Key>
+          <Property Name="xserver_name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="xdttm_ins" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="xdttm_last_ins_upd" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="xfallback_dbid" Type="Int16" />
+          <Property Name="name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="dbid" Type="Int16" Nullable="false" />
+          <Property Name="status" Type="Int16" Nullable="false" />
+          <Property Name="version" Type="Int16" Nullable="false" />
+        </EntityType>
+        <EntityType Name="spt_fallback_dev">
+          <Key>
+            <PropertyRef Name="xserver_name" />
+            <PropertyRef Name="xdttm_ins" />
+            <PropertyRef Name="xdttm_last_ins_upd" />
+            <PropertyRef Name="low" />
+            <PropertyRef Name="high" />
+            <PropertyRef Name="status" />
+            <PropertyRef Name="name" />
+            <PropertyRef Name="phyname" />
+          </Key>
+          <Property Name="xserver_name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="xdttm_ins" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="xdttm_last_ins_upd" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="xfallback_low" Type="Int32" />
+          <Property Name="xfallback_drive" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="low" Type="Int32" Nullable="false" />
+          <Property Name="high" Type="Int32" Nullable="false" />
+          <Property Name="status" Type="Int16" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="phyname" Type="String" MaxLength="127" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="spt_fallback_usg">
+          <Key>
+            <PropertyRef Name="xserver_name" />
+            <PropertyRef Name="xdttm_ins" />
+            <PropertyRef Name="xdttm_last_ins_upd" />
+            <PropertyRef Name="dbid" />
+            <PropertyRef Name="segmap" />
+            <PropertyRef Name="lstart" />
+            <PropertyRef Name="sizepg" />
+            <PropertyRef Name="vstart" />
+          </Key>
+          <Property Name="xserver_name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="xdttm_ins" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="xdttm_last_ins_upd" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="xfallback_vstart" Type="Int32" />
+          <Property Name="dbid" Type="Int16" Nullable="false" />
+          <Property Name="segmap" Type="Int32" Nullable="false" />
+          <Property Name="lstart" Type="Int32" Nullable="false" />
+          <Property Name="sizepg" Type="Int32" Nullable="false" />
+          <Property Name="vstart" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="spt_monitor">
+          <Key>
+            <PropertyRef Name="lastrun" />
+            <PropertyRef Name="cpu_busy" />
+            <PropertyRef Name="io_busy" />
+            <PropertyRef Name="idle" />
+            <PropertyRef Name="pack_received" />
+            <PropertyRef Name="pack_sent" />
+            <PropertyRef Name="connections" />
+            <PropertyRef Name="pack_errors" />
+            <PropertyRef Name="total_read" />
+            <PropertyRef Name="total_write" />
+            <PropertyRef Name="total_errors" />
+          </Key>
+          <Property Name="lastrun" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="cpu_busy" Type="Int32" Nullable="false" />
+          <Property Name="io_busy" Type="Int32" Nullable="false" />
+          <Property Name="idle" Type="Int32" Nullable="false" />
+          <Property Name="pack_received" Type="Int32" Nullable="false" />
+          <Property Name="pack_sent" Type="Int32" Nullable="false" />
+          <Property Name="connections" Type="Int32" Nullable="false" />
+          <Property Name="pack_errors" Type="Int32" Nullable="false" />
+          <Property Name="total_read" Type="Int32" Nullable="false" />
+          <Property Name="total_write" Type="Int32" Nullable="false" />
+          <Property Name="total_errors" Type="Int32" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_dbo_Courses_dbo_Classes_ClassId">
+          <End Role="Classes" Type="Self.Class" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Courses" Type="Self.Cours" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Classes">
+              <PropertyRef Name="ClassId" />
+            </Principal>
+            <Dependent Role="Courses">
+              <PropertyRef Name="ClassId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Sections_Classes">
+          <End Role="Classes" Type="Self.Class" Multiplicity="0..1" />
+          <End Role="Sections" Type="Self.Section" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Classes">
+              <PropertyRef Name="ClassId" />
+            </Principal>
+            <Dependent Role="Sections">
+              <PropertyRef Name="ClassId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_StudentsGrade_Classes">
+          <End Role="Classes" Type="Self.Class" Multiplicity="1" />
+          <End Role="StudentsGrade" Type="Self.StudentsGrade" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Classes">
+              <PropertyRef Name="ClassId" />
+            </Principal>
+            <Dependent Role="StudentsGrade">
+              <PropertyRef Name="ClassId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_Courses_dbo_ClassMaterials_ClassMaterialsId">
+          <End Role="ClassMaterials" Type="Self.ClassMaterial" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Courses" Type="Self.Cours" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ClassMaterials">
+              <PropertyRef Name="ClassMaterialsId" />
+            </Principal>
+            <Dependent Role="Courses">
+              <PropertyRef Name="ClassMaterialsId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_StudentsGrade_Courses">
+          <End Role="Courses" Type="Self.Cours" Multiplicity="1" />
+          <End Role="StudentsGrade" Type="Self.StudentsGrade" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Courses">
+              <PropertyRef Name="CoursesId" />
+            </Principal>
+            <Dependent Role="StudentsGrade">
+              <PropertyRef Name="CourseId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_StudySchedule_Courses">
+          <End Role="Courses" Type="Self.Cours" Multiplicity="0..1" />
+          <End Role="StudySchedule" Type="Self.StudySchedule" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Courses">
+              <PropertyRef Name="CoursesId" />
+            </Principal>
+            <Dependent Role="StudySchedule">
+              <PropertyRef Name="CourseId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TeacherCourses_Courses">
+          <End Role="Courses" Type="Self.Cours" Multiplicity="1" />
+          <End Role="TeacherCourses" Type="Self.TeacherCours" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Courses">
+              <PropertyRef Name="CoursesId" />
+            </Principal>
+            <Dependent Role="TeacherCourses">
+              <PropertyRef Name="CourseId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DayDates_Teachers">
+          <End Role="Teachers" Type="Self.Teacher" Multiplicity="0..1" />
+          <End Role="DayDates" Type="Self.DayDate" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Teachers">
+              <PropertyRef Name="TeacherId" />
+            </Principal>
+            <Dependent Role="DayDates">
+              <PropertyRef Name="TeacherId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_StudySchedule_Days">
+          <End Role="Days" Type="Self.Day" Multiplicity="0..1" />
+          <End Role="StudySchedule" Type="Self.StudySchedule" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Days">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="StudySchedule">
+              <PropertyRef Name="DayId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_Students_dbo_Sections_SectionId">
+          <End Role="Sections" Type="Self.Section" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Students" Type="Self.Student" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Sections">
+              <PropertyRef Name="SectionId" />
+            </Principal>
+            <Dependent Role="Students">
+              <PropertyRef Name="SectionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_TeacherSections_dbo_Sections_SectinId">
+          <End Role="Sections" Type="Self.Section" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="TeacherSections" Type="Self.TeacherSection" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Sections">
+              <PropertyRef Name="SectionId" />
+            </Principal>
+            <Dependent Role="TeacherSections">
+              <PropertyRef Name="SectinId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_StudentsGrade_Sections">
+          <End Role="Sections" Type="Self.Section" Multiplicity="1" />
+          <End Role="StudentsGrade" Type="Self.StudentsGrade" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Sections">
+              <PropertyRef Name="SectionId" />
+            </Principal>
+            <Dependent Role="StudentsGrade">
+              <PropertyRef Name="SectionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_StudySchedule_Sections">
+          <End Role="Sections" Type="Self.Section" Multiplicity="0..1" />
+          <End Role="StudySchedule" Type="Self.StudySchedule" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Sections">
+              <PropertyRef Name="SectionId" />
+            </Principal>
+            <Dependent Role="StudySchedule">
+              <PropertyRef Name="SectionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_StudentAttindence_Students">
+          <End Role="Students" Type="Self.Student" Multiplicity="0..1" />
+          <End Role="StudentAttindence" Type="Self.StudentAttindence" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Students">
+              <PropertyRef Name="StudentId" />
+            </Principal>
+            <Dependent Role="StudentAttindence">
+              <PropertyRef Name="StudentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_StudentsGrade_Students">
+          <End Role="Students" Type="Self.Student" Multiplicity="0..1" />
+          <End Role="StudentsGrade" Type="Self.StudentsGrade" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Students">
+              <PropertyRef Name="StudentId" />
+            </Principal>
+            <Dependent Role="StudentsGrade">
+              <PropertyRef Name="StudentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_StudentsGrade_Students1">
+          <End Role="Students" Type="Self.Student" Multiplicity="0..1" />
+          <End Role="StudentsGrade" Type="Self.StudentsGrade" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Students">
+              <PropertyRef Name="StudentId" />
+            </Principal>
+            <Dependent Role="StudentsGrade">
+              <PropertyRef Name="StudentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_StudentsGrade_Teachers">
+          <End Role="Teachers" Type="Self.Teacher" Multiplicity="1" />
+          <End Role="StudentsGrade" Type="Self.StudentsGrade" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Teachers">
+              <PropertyRef Name="TeacherId" />
+            </Principal>
+            <Dependent Role="StudentsGrade">
+              <PropertyRef Name="TeacherId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_StudySchedule_Teachers">
+          <End Role="Teachers" Type="Self.Teacher" Multiplicity="0..1" />
+          <End Role="StudySchedule" Type="Self.StudySchedule" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Teachers">
+              <PropertyRef Name="TeacherId" />
+            </Principal>
+            <Dependent Role="StudySchedule">
+              <PropertyRef Name="TeacherId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_TeacherCourses_dbo_Teachers_TeacherId">
+          <End Role="Teachers" Type="Self.Teacher" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="TeacherCourses" Type="Self.TeacherCours" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Teachers">
+              <PropertyRef Name="TeacherId" />
+            </Principal>
+            <Dependent Role="TeacherCourses">
+              <PropertyRef Name="TeacherId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_TeacherSections_dbo_Teachers_TeacherId">
+          <End Role="Teachers" Type="Self.Teacher" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="TeacherSections" Type="Self.TeacherSection" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Teachers">
+              <PropertyRef Name="TeacherId" />
+            </Principal>
+            <Dependent Role="TeacherSections">
+              <PropertyRef Name="TeacherId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="masterEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="C__MigrationHistory" EntityType="Self.C__MigrationHistory" />
+          <EntitySet Name="AssigmentGrades" EntityType="Self.AssigmentGrade" />
+          <EntitySet Name="Assigments" EntityType="Self.Assigment" />
+          <EntitySet Name="Classes" EntityType="Self.Class" />
+          <EntitySet Name="ClassMaterials" EntityType="Self.ClassMaterial" />
+          <EntitySet Name="Courses" EntityType="Self.Cours" />
+          <EntitySet Name="DayDates" EntityType="Self.DayDate" />
+          <EntitySet Name="Days" EntityType="Self.Day" />
+          <EntitySet Name="Hostels" EntityType="Self.Hostel" />
+          <EntitySet Name="Libraries" EntityType="Self.Library" />
+          <EntitySet Name="Managers" EntityType="Self.Manager" />
+          <EntitySet Name="Parents" EntityType="Self.Parent" />
+          <EntitySet Name="Sections" EntityType="Self.Section" />
+          <EntitySet Name="StudentAttindences" EntityType="Self.StudentAttindence" />
+          <EntitySet Name="Students" EntityType="Self.Student" />
+          <EntitySet Name="StudentsGrades" EntityType="Self.StudentsGrade" />
+          <EntitySet Name="StudySchedules" EntityType="Self.StudySchedule" />
+          <EntitySet Name="TeacherCourses" EntityType="Self.TeacherCours" />
+          <EntitySet Name="Teachers" EntityType="Self.Teacher" />
+          <EntitySet Name="TeacherSections" EntityType="Self.TeacherSection" />
+          <EntitySet Name="MSreplication_options" EntityType="Self.MSreplication_options" />
+          <EntitySet Name="spt_fallback_db" EntityType="Self.spt_fallback_db" />
+          <EntitySet Name="spt_fallback_dev" EntityType="Self.spt_fallback_dev" />
+          <EntitySet Name="spt_fallback_usg" EntityType="Self.spt_fallback_usg" />
+          <EntitySet Name="spt_monitor" EntityType="Self.spt_monitor" />
+          <AssociationSet Name="FK_dbo_Courses_dbo_Classes_ClassId" Association="Self.FK_dbo_Courses_dbo_Classes_ClassId">
+            <End Role="Classes" EntitySet="Classes" />
+            <End Role="Courses" EntitySet="Courses" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Sections_Classes" Association="Self.FK_Sections_Classes">
+            <End Role="Classes" EntitySet="Classes" />
+            <End Role="Sections" EntitySet="Sections" />
+          </AssociationSet>
+          <AssociationSet Name="FK_StudentsGrade_Classes" Association="Self.FK_StudentsGrade_Classes">
+            <End Role="Classes" EntitySet="Classes" />
+            <End Role="StudentsGrade" EntitySet="StudentsGrades" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_Courses_dbo_ClassMaterials_ClassMaterialsId" Association="Self.FK_dbo_Courses_dbo_ClassMaterials_ClassMaterialsId">
+            <End Role="ClassMaterials" EntitySet="ClassMaterials" />
+            <End Role="Courses" EntitySet="Courses" />
+          </AssociationSet>
+          <AssociationSet Name="FK_StudentsGrade_Courses" Association="Self.FK_StudentsGrade_Courses">
+            <End Role="Courses" EntitySet="Courses" />
+            <End Role="StudentsGrade" EntitySet="StudentsGrades" />
+          </AssociationSet>
+          <AssociationSet Name="FK_StudySchedule_Courses" Association="Self.FK_StudySchedule_Courses">
+            <End Role="Courses" EntitySet="Courses" />
+            <End Role="StudySchedule" EntitySet="StudySchedules" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TeacherCourses_Courses" Association="Self.FK_TeacherCourses_Courses">
+            <End Role="Courses" EntitySet="Courses" />
+            <End Role="TeacherCourses" EntitySet="TeacherCourses" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DayDates_Teachers" Association="Self.FK_DayDates_Teachers">
+            <End Role="Teachers" EntitySet="Teachers" />
+            <End Role="DayDates" EntitySet="DayDates" />
+          </AssociationSet>
+          <AssociationSet Name="FK_StudySchedule_Days" Association="Self.FK_StudySchedule_Days">
+            <End Role="Days" EntitySet="Days" />
+            <End Role="StudySchedule" EntitySet="StudySchedules" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_Students_dbo_Sections_SectionId" Association="Self.FK_dbo_Students_dbo_Sections_SectionId">
+            <End Role="Sections" EntitySet="Sections" />
+            <End Role="Students" EntitySet="Students" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_TeacherSections_dbo_Sections_SectinId" Association="Self.FK_dbo_TeacherSections_dbo_Sections_SectinId">
+            <End Role="Sections" EntitySet="Sections" />
+            <End Role="TeacherSections" EntitySet="TeacherSections" />
+          </AssociationSet>
+          <AssociationSet Name="FK_StudentsGrade_Sections" Association="Self.FK_StudentsGrade_Sections">
+            <End Role="Sections" EntitySet="Sections" />
+            <End Role="StudentsGrade" EntitySet="StudentsGrades" />
+          </AssociationSet>
+          <AssociationSet Name="FK_StudySchedule_Sections" Association="Self.FK_StudySchedule_Sections">
+            <End Role="Sections" EntitySet="Sections" />
+            <End Role="StudySchedule" EntitySet="StudySchedules" />
+          </AssociationSet>
+          <AssociationSet Name="FK_StudentAttindence_Students" Association="Self.FK_StudentAttindence_Students">
+            <End Role="Students" EntitySet="Students" />
+            <End Role="StudentAttindence" EntitySet="StudentAttindences" />
+          </AssociationSet>
+          <AssociationSet Name="FK_StudentsGrade_Students" Association="Self.FK_StudentsGrade_Students">
+            <End Role="Students" EntitySet="Students" />
+            <End Role="StudentsGrade" EntitySet="StudentsGrades" />
+          </AssociationSet>
+          <AssociationSet Name="FK_StudentsGrade_Students1" Association="Self.FK_StudentsGrade_Students1">
+            <End Role="Students" EntitySet="Students" />
+            <End Role="StudentsGrade" EntitySet="StudentsGrades" />
+          </AssociationSet>
+          <AssociationSet Name="FK_StudentsGrade_Teachers" Association="Self.FK_StudentsGrade_Teachers">
+            <End Role="Teachers" EntitySet="Teachers" />
+            <End Role="StudentsGrade" EntitySet="StudentsGrades" />
+          </AssociationSet>
+          <AssociationSet Name="FK_StudySchedule_Teachers" Association="Self.FK_StudySchedule_Teachers">
+            <End Role="Teachers" EntitySet="Teachers" />
+            <End Role="StudySchedule" EntitySet="StudySchedules" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_TeacherCourses_dbo_Teachers_TeacherId" Association="Self.FK_dbo_TeacherCourses_dbo_Teachers_TeacherId">
+            <End Role="Teachers" EntitySet="Teachers" />
+            <End Role="TeacherCourses" EntitySet="TeacherCourses" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_TeacherSections_dbo_Teachers_TeacherId" Association="Self.FK_dbo_TeacherSections_dbo_Teachers_TeacherId">
+            <End Role="Teachers" EntitySet="Teachers" />
+            <End Role="TeacherSections" EntitySet="TeacherSections" />
+          </AssociationSet>
+          <FunctionImport Name="sp_getTeacher" ReturnType="Collection(masterModel.sp_getTeacher_Result)">
+          <Parameter Name="TeacherID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_MScleanupmergepublisher" />
+          <FunctionImport Name="sp_MSrepl_startup" />
+          <EntitySet Name="Events" EntityType="masterModel.Event" />
+        </EntityContainer>
+        <ComplexType Name="sp_getTeacher_Result">
+          <Property Type="String" Name="ThFirstName" Nullable="true" />
+          <Property Type="String" Name="Name" Nullable="true" />
+          <Property Type="String" Name="ClassName" Nullable="true" />
+          <Property Type="String" Name="ThSecondName" Nullable="true" />
+          <Property Type="String" Name="CoursesTitle" Nullable="true" />
+        </ComplexType>
+        <EntityType Name="Event">
+          <Key>
+            <PropertyRef Name="EventID" />
+          </Key>
+          <Property Name="EventID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Subject" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="Start" Type="DateTime" Precision="3" />
+          <Property Name="End" Type="DateTime" Precision="3" />
+          <Property Name="ThemeColor" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="IsFullDay" Type="Boolean" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="masterModelStoreContainer" CdmEntityContainer="masterEntities">
+          <EntitySetMapping Name="C__MigrationHistory">
+            <EntityTypeMapping TypeName="masterModel.C__MigrationHistory">
+              <MappingFragment StoreEntitySet="__MigrationHistory">
+                <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
+                <ScalarProperty Name="ContextKey" ColumnName="ContextKey" />
+                <ScalarProperty Name="Model" ColumnName="Model" />
+                <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AssigmentGrades">
+            <EntityTypeMapping TypeName="masterModel.AssigmentGrade">
+              <MappingFragment StoreEntitySet="AssigmentGrades">
+                <ScalarProperty Name="AssigmentGradeId" ColumnName="AssigmentGradeId" />
+                <ScalarProperty Name="StudentName" ColumnName="StudentName" />
+                <ScalarProperty Name="AssigmentName" ColumnName="AssigmentName" />
+                <ScalarProperty Name="Grade" ColumnName="Grade" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Assigments">
+            <EntityTypeMapping TypeName="masterModel.Assigment">
+              <MappingFragment StoreEntitySet="Assigments">
+                <ScalarProperty Name="AssigmentId" ColumnName="AssigmentId" />
+                <ScalarProperty Name="AssigName" ColumnName="AssigName" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="LastDate" ColumnName="LastDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Classes">
+            <EntityTypeMapping TypeName="masterModel.Class">
+              <MappingFragment StoreEntitySet="Classes">
+                <ScalarProperty Name="ClassId" ColumnName="ClassId" />
+                <ScalarProperty Name="ClassName" ColumnName="ClassName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ClassMaterials">
+            <EntityTypeMapping TypeName="masterModel.ClassMaterial">
+              <MappingFragment StoreEntitySet="ClassMaterials">
+                <ScalarProperty Name="ClassMaterialsId" ColumnName="ClassMaterialsId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Courses">
+            <EntityTypeMapping TypeName="masterModel.Cours">
+              <MappingFragment StoreEntitySet="Courses">
+                <ScalarProperty Name="CoursesId" ColumnName="CoursesId" />
+                <ScalarProperty Name="CoursesTitle" ColumnName="CoursesTitle" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="ClassId" ColumnName="ClassId" />
+                <ScalarProperty Name="ClassMaterialsId" ColumnName="ClassMaterialsId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DayDates">
+            <EntityTypeMapping TypeName="masterModel.DayDate">
+              <MappingFragment StoreEntitySet="DayDates">
+                <ScalarProperty Name="DayId" ColumnName="DayId" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="TeacherId" ColumnName="TeacherId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Days">
+            <EntityTypeMapping TypeName="masterModel.Day">
+              <MappingFragment StoreEntitySet="Days">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Day1" ColumnName="Day" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Hostels">
+            <EntityTypeMapping TypeName="masterModel.Hostel">
+              <MappingFragment StoreEntitySet="Hostels">
+                <ScalarProperty Name="HostleId" ColumnName="HostleId" />
+                <ScalarProperty Name="HostelType" ColumnName="HostelType" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Libraries">
+            <EntityTypeMapping TypeName="masterModel.Library">
+              <MappingFragment StoreEntitySet="Libraries">
+                <ScalarProperty Name="LibraryId" ColumnName="LibraryId" />
+                <ScalarProperty Name="BookTitle" ColumnName="BookTitle" />
+                <ScalarProperty Name="BookAuthor" ColumnName="BookAuthor" />
+                <ScalarProperty Name="BookPrice" ColumnName="BookPrice" />
+                <ScalarProperty Name="BookDescription" ColumnName="BookDescription" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Managers">
+            <EntityTypeMapping TypeName="masterModel.Manager">
+              <MappingFragment StoreEntitySet="Managers">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Parents">
+            <EntityTypeMapping TypeName="masterModel.Parent">
+              <MappingFragment StoreEntitySet="Parents">
+                <ScalarProperty Name="ParentsId" ColumnName="ParentsId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sections">
+            <EntityTypeMapping TypeName="masterModel.Section">
+              <MappingFragment StoreEntitySet="Sections">
+                <ScalarProperty Name="SectionId" ColumnName="SectionId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ClassId" ColumnName="ClassId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="StudentAttindences">
+            <EntityTypeMapping TypeName="masterModel.StudentAttindence">
+              <MappingFragment StoreEntitySet="StudentAttindence">
+                <ScalarProperty Name="AttId" ColumnName="AttId" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="StudentId" ColumnName="StudentId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Students">
+            <EntityTypeMapping TypeName="masterModel.Student">
+              <MappingFragment StoreEntitySet="Students">
+                <ScalarProperty Name="StudentId" ColumnName="StudentId" />
+                <ScalarProperty Name="StFirstName" ColumnName="StFirstName" />
+                <ScalarProperty Name="StAddress" ColumnName="StAddress" />
+                <ScalarProperty Name="StDOB" ColumnName="StDOB" />
+                <ScalarProperty Name="StAge" ColumnName="StAge" />
+                <ScalarProperty Name="StSecondName" ColumnName="StSecondName" />
+                <ScalarProperty Name="StLastName" ColumnName="StLastName" />
+                <ScalarProperty Name="StPassword" ColumnName="StPassword" />
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="SectionId" ColumnName="SectionId" />
+                <ScalarProperty Name="National_Number" ColumnName="National_Number" />
+                <ScalarProperty Name="ImagePath" ColumnName="ImagePath" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="StudentsGrades">
+            <EntityTypeMapping TypeName="masterModel.StudentsGrade">
+              <MappingFragment StoreEntitySet="StudentsGrade">
+                <ScalarProperty Name="TeacherId" ColumnName="TeacherId" />
+                <ScalarProperty Name="StudentId" ColumnName="StudentId" />
+                <ScalarProperty Name="CourseId" ColumnName="CourseId" />
+                <ScalarProperty Name="ClassId" ColumnName="ClassId" />
+                <ScalarProperty Name="SectionId" ColumnName="SectionId" />
+                <ScalarProperty Name="FirstGrade" ColumnName="FirstGrade" />
+                <ScalarProperty Name="SecondGrade" ColumnName="SecondGrade" />
+                <ScalarProperty Name="ThirdGrade" ColumnName="ThirdGrade" />
+                <ScalarProperty Name="FinalGrade" ColumnName="FinalGrade" />
+                <ScalarProperty Name="Avg" ColumnName="Avg" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="StudySchedules">
+            <EntityTypeMapping TypeName="masterModel.StudySchedule">
+              <MappingFragment StoreEntitySet="StudySchedule">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="CourseId" ColumnName="CourseId" />
+                <ScalarProperty Name="DayId" ColumnName="DayId" />
+                <ScalarProperty Name="TeacherId" ColumnName="TeacherId" />
+                <ScalarProperty Name="SectionId" ColumnName="SectionId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TeacherCourses">
+            <EntityTypeMapping TypeName="masterModel.TeacherCours">
+              <MappingFragment StoreEntitySet="TeacherCourses">
+                <ScalarProperty Name="CourseId" ColumnName="CourseId" />
+                <ScalarProperty Name="TeacherId" ColumnName="TeacherId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Teachers">
+            <EntityTypeMapping TypeName="masterModel.Teacher">
+              <MappingFragment StoreEntitySet="Teachers">
+                <ScalarProperty Name="TeacherId" ColumnName="TeacherId" />
+                <ScalarProperty Name="ThFirstName" ColumnName="ThFirstName" />
+                <ScalarProperty Name="ThAddress" ColumnName="ThAddress" />
+                <ScalarProperty Name="ThHireDate" ColumnName="ThHireDate" />
+                <ScalarProperty Name="ThDegree" ColumnName="ThDegree" />
+                <ScalarProperty Name="ThExperience" ColumnName="ThExperience" />
+                <ScalarProperty Name="ThSecondName" ColumnName="ThSecondName" />
+                <ScalarProperty Name="ThLastName" ColumnName="ThLastName" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TeacherSections">
+            <EntityTypeMapping TypeName="masterModel.TeacherSection">
+              <MappingFragment StoreEntitySet="TeacherSections">
+                <ScalarProperty Name="TeacherId" ColumnName="TeacherId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="SectinId" ColumnName="SectinId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MSreplication_options">
+            <EntityTypeMapping TypeName="masterModel.MSreplication_options">
+              <MappingFragment StoreEntitySet="MSreplication_options">
+                <ScalarProperty Name="optname" ColumnName="optname" />
+                <ScalarProperty Name="value" ColumnName="value" />
+                <ScalarProperty Name="major_version" ColumnName="major_version" />
+                <ScalarProperty Name="minor_version" ColumnName="minor_version" />
+                <ScalarProperty Name="revision" ColumnName="revision" />
+                <ScalarProperty Name="install_failures" ColumnName="install_failures" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="spt_fallback_db">
+            <EntityTypeMapping TypeName="masterModel.spt_fallback_db">
+              <MappingFragment StoreEntitySet="spt_fallback_db">
+                <ScalarProperty Name="xserver_name" ColumnName="xserver_name" />
+                <ScalarProperty Name="xdttm_ins" ColumnName="xdttm_ins" />
+                <ScalarProperty Name="xdttm_last_ins_upd" ColumnName="xdttm_last_ins_upd" />
+                <ScalarProperty Name="xfallback_dbid" ColumnName="xfallback_dbid" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="dbid" ColumnName="dbid" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="version" ColumnName="version" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="spt_fallback_dev">
+            <EntityTypeMapping TypeName="masterModel.spt_fallback_dev">
+              <MappingFragment StoreEntitySet="spt_fallback_dev">
+                <ScalarProperty Name="xserver_name" ColumnName="xserver_name" />
+                <ScalarProperty Name="xdttm_ins" ColumnName="xdttm_ins" />
+                <ScalarProperty Name="xdttm_last_ins_upd" ColumnName="xdttm_last_ins_upd" />
+                <ScalarProperty Name="xfallback_low" ColumnName="xfallback_low" />
+                <ScalarProperty Name="xfallback_drive" ColumnName="xfallback_drive" />
+                <ScalarProperty Name="low" ColumnName="low" />
+                <ScalarProperty Name="high" ColumnName="high" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="phyname" ColumnName="phyname" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="spt_fallback_usg">
+            <EntityTypeMapping TypeName="masterModel.spt_fallback_usg">
+              <MappingFragment StoreEntitySet="spt_fallback_usg">
+                <ScalarProperty Name="xserver_name" ColumnName="xserver_name" />
+                <ScalarProperty Name="xdttm_ins" ColumnName="xdttm_ins" />
+                <ScalarProperty Name="xdttm_last_ins_upd" ColumnName="xdttm_last_ins_upd" />
+                <ScalarProperty Name="xfallback_vstart" ColumnName="xfallback_vstart" />
+                <ScalarProperty Name="dbid" ColumnName="dbid" />
+                <ScalarProperty Name="segmap" ColumnName="segmap" />
+                <ScalarProperty Name="lstart" ColumnName="lstart" />
+                <ScalarProperty Name="sizepg" ColumnName="sizepg" />
+                <ScalarProperty Name="vstart" ColumnName="vstart" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="spt_monitor">
+            <EntityTypeMapping TypeName="masterModel.spt_monitor">
+              <MappingFragment StoreEntitySet="spt_monitor">
+                <ScalarProperty Name="lastrun" ColumnName="lastrun" />
+                <ScalarProperty Name="cpu_busy" ColumnName="cpu_busy" />
+                <ScalarProperty Name="io_busy" ColumnName="io_busy" />
+                <ScalarProperty Name="idle" ColumnName="idle" />
+                <ScalarProperty Name="pack_received" ColumnName="pack_received" />
+                <ScalarProperty Name="pack_sent" ColumnName="pack_sent" />
+                <ScalarProperty Name="connections" ColumnName="connections" />
+                <ScalarProperty Name="pack_errors" ColumnName="pack_errors" />
+                <ScalarProperty Name="total_read" ColumnName="total_read" />
+                <ScalarProperty Name="total_write" ColumnName="total_write" />
+                <ScalarProperty Name="total_errors" ColumnName="total_errors" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="sp_getTeacher" FunctionName="masterModel.Store.sp_getTeacher">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="masterModel.sp_getTeacher_Result">
+                <ScalarProperty Name="ThFirstName" ColumnName="ThFirstName" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ClassName" ColumnName="ClassName" />
+                <ScalarProperty Name="ThSecondName" ColumnName="ThSecondName" />
+                <ScalarProperty Name="CoursesTitle" ColumnName="CoursesTitle" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_MScleanupmergepublisher" FunctionName="masterModel.Store.sp_MScleanupmergepublisher" />
+          <FunctionImportMapping FunctionImportName="sp_MSrepl_startup" FunctionName="masterModel.Store.sp_MSrepl_startup" />
+          <EntitySetMapping Name="Events">
+            <EntityTypeMapping TypeName="masterModel.Event">
+              <MappingFragment StoreEntitySet="Events">
+                <ScalarProperty Name="IsFullDay" ColumnName="IsFullDay" />
+                <ScalarProperty Name="ThemeColor" ColumnName="ThemeColor" />
+                <ScalarProperty Name="End" ColumnName="End" />
+                <ScalarProperty Name="Start" ColumnName="Start" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Subject" ColumnName="Subject" />
+                <ScalarProperty Name="EventID" ColumnName="EventID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

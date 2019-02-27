@@ -1,0 +1,648 @@
+/* back ground color  main color color is font color */
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+html, body{
+	font-family: "open sans","helvetica Neue", Helvetica, Arialrial, sans-serif;
+	background-color: #f2f7f8; 
+	color: #676a6c;
+	height:100%;
+	    line-height: 1.5;
+		
+}
+.box{
+	border: none;
+}
+#side-menu img
+{
+	margin-top:-30px;
+	margin-bottom:-74px;
+	 height:200px;
+	 width:250px;
+}
+
+#side-menu{
+	background-color : #fff;
+	padding: 0px;
+	z-index:1;
+	transition: all 0.5s ease;
+    
+}
+#side-menu.active{
+	background-color : #fff;
+	padding: 0px;
+	left:-100%;
+	
+	
+}
+
+
+#side-menu h1{
+	color:#54667a;
+	text-align:center;
+	margin-bottom:10%;
+	font-size: 25px;
+	font-weight:bold;
+}
+
+#side-menu ul{
+	list-style:none;
+	margin:0px;
+	padding:0px;
+	
+}
+#side-menu a{
+	
+	padding:20px 30px;
+	text-decoration:none;
+	color:#54667a;
+	font-weight:bold;
+	font-size:15px;
+	display: block;
+}
+#side-menu a.active{
+	background-color:#f2f7f8;
+}
+#side-menu .glyphicon{
+	margin-right:7px;
+}
+#side-menu a:hover{
+	
+	color:#6DD5FA;
+	display:block;
+	background-color:#f2f7f8;
+	border-right:3px solid #6DD5FA;
+	cursor:pointer;
+}
+#side-menu a:focus{
+	color:#6DD5FA;
+	display:block;
+	border-right:3px solid #6DD5FA;
+	display:block;
+}
+
+#side-menu .collapseable li{
+	padding-left:20px;
+	padding-top:5px;
+}
+#side-menu .collapseable a{
+	color:#54667a;
+	font-size:13px;
+	padding:0px 10px;
+	display:block;
+	border-right:none;
+	
+}
+
+
+#side-menu .collapseable a:hover{
+	color:#6DD5FA;
+	
+}
+#side-menu .collapseable{
+	border-left:4px solid #6DD5FA;
+	background-color:#fff;
+}
+#side-menu .link >ul >li{
+	padding-bottom:10px;
+}
+#icons1, #icons2, #icons3, #icons4, #icons5, #icons6 {
+    margin-left: -20px;
+    opacity: 0.4;
+    font-size: 10px;
+}
+
+.mr-auto{
+	    margin-left: auto !important; 
+    margin-right: initial !important; 
+}
+.display-table{
+	display: table;
+	padding: 0px;
+	height:100%;
+	width:100%;
+}
+.display-table-row{
+	display:table-row;
+	height:100%;
+}
+.display-table-cell{
+	display: table-cell;
+	float:none;
+	height:100%;
+}
+.valign-top{
+	vertical-align: top;
+}
+#nav-header{
+	background-image:linear-gradient(to right,#2980B9,#6DD5FA,#2980B9);
+	border-bottom: 1px solid #373737;
+	height:60px;
+   
+	/*to color the top nav bar */
+}
+#nav-header #header-search-field{
+	background-color:#f4f6f4;
+	padding-top:-17px;
+	margin-top:10px;
+	vertical-align: center;
+    border-radius: 25px;
+	border: 2px solid #fba100;
+	width:300px;
+	height:30px;
+	outline:none;
+	
+	/* to show the searchbar without outlines or borders */
+}
+
+#nav-header ul {
+	margin:0px;
+	padding:0px;
+	list-style: none;
+	color: #fff;
+}
+#nav-header ul li {
+	float:left;
+	margin-left:15px;   /* to make the border smaller and make them side to eash other */
+	padding:20px 0px;
+}
+.lable-message{
+	background-color: #6DD5FA  /* to change the color of the number on the icons top right corner*/
+}
+#nav-header ul a {
+	text-decoration: none;
+}
+#nav-header .logout{  /* cahnge color of logout button*/
+	color:#fff;
+	font-weight: bold;
+}
+#nav-header .logout:hover{ /*to change the color when hover over logout*/
+	color:#6DD5FA;
+}
+#nav-header .glyphicon{ color:white;}
+#nav-header #welcome{
+	margin-right:20px;
+}
+#nav-header ul .label {
+	position:absolute;
+	margin-top:-10px;
+	margin-left:-5;
+}
+#nav-header .fixed-width{
+	width:35px;
+	
+}
+#footer{
+	position:absolute;
+	width:100%;
+	
+	bottom:0px;
+	background-image:linear-gradient(to right,#2980B9,#6DD5FA,#2980B9);
+	padding: 10px;
+	font-size:12px;
+	color: #fff;
+
+}
+.navbar-default{
+	background-color: transparent;
+}
+
+.ion-navicon-round {
+    position: block;
+    color: white;
+    font-size: 36px;
+    margin-top: 2%;
+}
+
+.ion-navicon-round:hover {
+    position: block;
+    font-size: 36px;
+    margin-top: 2%;
+    cursor: pointer;
+    animation-name: anime;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+@keyframes anime {
+		  0%   {color: white; }
+		  50%  {color: #6DD5FA; }
+		  100%  {color: white;}
+		  
+		}
+@keyframes animebotton {
+    0% {
+        background-color: white;
+        color: #6DD5FA;
+        
+
+    }
+
+    50% {
+        background-color: #6DD5FA;
+        color: white;
+    }
+
+    100% {
+        background-color: white;
+        color: #6DD5FA;
+    }
+}
+@keyframes animebottona {
+    0% {
+        background-color: #6DD5FA;
+    }
+
+    50% {
+        background-color: #2980B9;
+     
+    }
+    100% {
+        background-color: #6DD5FA;
+        
+    }
+}
+@keyframes animebottondele{
+    0% {
+        background-color: #6bbaa7;
+    }
+
+    50% {
+        background-color: #ad0303;
+    }
+
+    100% {
+        background-color: #6bbaa7;
+    }
+}
+		
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
+    .ion-navicon-round {
+        display: none;
+    }
+ 
+}
+
+
+.toggle-btn .icon-bar{
+		border: 1px black solid;
+}
+
+.navbar-default .navbar-toggle{
+	border-color:white;
+	background-color:white;
+
+}
+.navbar-default .icon-bar {
+	border: 1px black solid;
+}
+
+.navbar-default .navbar-toggle:hover{
+	background-color:#6DD5FA;
+	border-color:#6DD5FA;
+}
+.navbar-default .navbar-toggle:focus{
+	background-color:#6DD5FA;
+}
+
+
+.navbar-default .navbar-toggle:hover{
+	background-color:#6DD5FA;
+}
+.navbar-default .navbar-toggle:focus{
+	background-color:#6DD5FA;
+}
+
+/* .navbar-collapse.collapse {
+    display: none !important;
+}*/
+#content {
+	margin:20px 0px 50px 0px;
+	background-color:#fff;
+	border-top:4px #6DD5FA solid;
+	text-decoration:none;
+}
+#content header{
+	border-bottom: 1px #f3f3f4 solid;
+	padding: 10px 20px;
+}
+.page-title{
+	font-size:14px;
+	font-weight:bold;
+	margin:0px;
+	text-decoration:none;
+	
+}
+.content-inner{
+	padding:20px;
+}
+
+/*end of dashbord*/
+.container {
+    width: 60%;
+}
+
+    .container #Search {
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+        margin-left: 4px;
+        border: 2px solid rgba(0, 0, 0, .3);
+        
+    }
+    .container #Search:focus {
+        border: 2px solid #6DD5FA;
+    }
+
+    .container .input-group {
+        border-radius: 15px;
+        
+       
+    }
+
+    .container .form-group {
+        border-radius: 15px;
+    }
+
+    .container .input-group :focus {
+        border: 2px solid #6DD5FA;
+    }
+
+    .container .input-group-addon {
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 25px;
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
+    }
+
+/*start with contents student*/
+#heads {
+    text-align: center;
+    margin-top: 2%;
+    margin-bottom: 5%;
+    font-family: 'Oswald',sans-serif;
+    font-weight: bold;
+}
+#img {
+    margin-left: 5%;
+    margin-right: 15%;
+}
+.style {
+    width: 90%;
+    padding-left:10px;
+
+}
+    .style .form-control {
+        border: 2px solid rgba(0, 0, 0, .3);
+        margin-left: 10%;
+        margin-top: 3%;
+        font-size: 16px;
+    }
+.style2 { /*teacher add*/
+    width: 80%;
+    padding-left: 30px;
+}
+    .style2 .form-control {
+        border: 2px solid rgba(0, 0, 0, .3) ;
+        
+        margin-top:3%;
+        font-size:16px;
+    }
+.style2 .control-label {
+    text-align: justify;
+    margin-top: 2%;
+    padding-left:20px;
+    font-family: 'Raleway', sans-serif;
+}
+
+        .style .form-control:focus {
+            border-color: #6DD5FA;
+        }
+.style  input[type = "submit"] {
+    margin-left:50%;
+    text-align: center;
+    color: white;
+      
+   
+}
+style2 input[type = "submit"] {
+    margin-left: 6%;
+    text-align: center;
+    color: white;
+}
+
+    .style[type = "submit"]:hover {
+        cursor: pointer;
+        animation-name: animebotton;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+    }
+.style2[type = "submit"]:hover {
+    cursor: pointer;
+    animation-name: animebotton;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+ .radio {
+    padding-left:10%;
+    
+
+}
+
+.style .control-label {
+    text-align: justify;
+    margin-top: 2%;
+    font-family: 'Raleway', sans-serif;
+}
+        
+
+/*tables*/
+#MyTable {
+    width: 99%;
+    margin-right: 0.5%;
+    margin-left: 0.5%;
+}
+
+
+
+    #MyTable td,tr {
+        border: 2px solid #6DD5FA;
+    }
+
+
+    #MyTable th ,tr {
+        text-align: center;
+        font-family: sans-serif;
+        font-size: 15px;
+    }
+
+    #MyTable th {
+        font-weight: bold;
+        background: linear-gradient(to right,#2980B9,#6DD5FA,#2980B9);
+        color: white;
+    }
+
+    #MyTable .btn-success {
+        color: white;
+    }
+#btn-add {
+    margin-left: 15%;
+}
+    #btn-add:hover {
+        background-color: #fba100;
+  
+    }
+
+
+
+.btn-info:hover {
+    animation-name: animebottona;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+  
+}
+
+.btn-delete:hover {
+    animation-name: animedele;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+   
+}
+
+.btn-success:hover {
+    background-color: #6bbaa7;
+ 
+}
+
+.btn-success a {
+    color: white;
+    text-decoration: none;
+}
+
+.btn-info a {
+    color:white;
+    text-decoration: none;
+}
+/*teacher table*/
+#Teachertabel {
+    width: 100%;
+    border: 2px solid #6DD5FA;
+}
+
+    #Teachertabel td, tr {
+        border: 2px solid #6DD5FA;
+    }
+
+    #Teachertabel th, tr {
+        text-align: center;
+        font-family: sans-serif;
+        font-size: 15px;
+    }
+
+    #Teachertabel th {
+        font-weight: bold;
+        background: linear-gradient(to right,#2980B9,#6DD5FA,#2980B9);
+        
+        color: white;
+    }
+
+h4 {
+    margin-left: 15%;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+/*class table*/
+
+#ClassTable {
+    width: 70%;
+    margin-right: 15%;
+    margin-left: 15%;
+}
+
+
+
+    #ClassTable td ,tr {
+        border: 2px solid #6DD5FA;
+    }
+
+    #ClassTable th ,tr {
+        text-align: center;
+        font-family: sans-serif;
+        font-size: 15px;
+    }
+
+    #ClassTable th {
+        font-weight: bold;
+        background: linear-gradient(to right,#2980B9,#6DD5FA,#2980B9);
+        color: white;
+    }
+
+    #ClassTable .btn-success {
+        color: white;
+    }
+    /*section table*/
+#SectionTable {
+    width: 70%;
+    margin-right: 15%;
+    margin-left: 15%;
+}
+
+
+
+    #SectionTable td, tr {
+        border: 2px solid #6DD5FA;
+    }
+
+    #SectionTable th, tr {
+        text-align: center;
+        font-family: sans-serif;
+        font-size: 15px;
+    }
+
+    #SectionTable th {
+        font-weight: bold;
+        background: linear-gradient(to right,#2980B9,#6DD5FA,#2980B9);
+        color: white;
+    }
+
+    #SectionTable .btn-success {
+        color: white;
+    }
+
+    /*teacherhome*/
+.btn2 {
+    border-radius: 9px;
+    font-family: 'Oswald', sans-serif;
+    color: #fff;
+    font-size: 135%;
+    padding: 10px 20px;
+    background-color: #6DD5FA;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+    .btn:hover {
+        animation-name: animebottona;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        color:white;
+
+        
+    }
+    /*scrollbar*/
+    ::-webkit-scrollbar{
+        width:8px;
+    }
+::-webkit-scrollbar-thumb {
+    border-radius:10px;
+    background-color:#a6a6a6;
+    box-shadow:inherit 0 0 6px rgba(0,0,0,.3); 
+}
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: inherit 0 0 6px rgba(0,0,0,.3);
+}
